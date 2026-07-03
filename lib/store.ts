@@ -1,0 +1,85 @@
+"use client";
+
+import { defaultSettings, Ebook, sampleEbooks, SiteSettings } from "@/lib/data";
+
+const BOOK_KEY = "ai-saas-academy-books";
+const SETTINGS_KEY = "ai-saas-academy-settings";
+
+function normalizeBook(book: Partial<Ebook>, fallback?: Ebook): Ebook {
+  return {
+    id: book.id || fallback?.id || crypto.randomUUID(),
+    title: book.title || fallback?.title || "Untitled eBook",
+    slug: book.slug || fallback?.slug || "untitled-ebook",
+    description: book.description || fallback?.description || "",
+    longDescription: book.longDescription || fallback?.longDescription || book.description || "",
+    price: Number(book.price ?? fallback?.price ?? 0),
+    category: book.category || fallback?.category || "Artificial Intelligence",
+    cover: book.cover || fallback?.cover || "",
+    gallery: Array.isArray(book.gallery) ? book.gallery : fallback?.gallery || [],
+    features: Array.isArray(book.features) ? book.features : fallback?.features || [],
+    featured: Boolean(book.featured ?? fallback?.featured ?? false),
+    createdAt: book.createdAt || fallback?.createdAt || new Date().toISOString()
+  };
+}
+
+export function loadBooks(): Ebook[] {
+  if (typeof window === "undefined") return sampleEbooks;
+  const saved = window.localStorage.getItem(BOOK_KEY);
+  if (!saved) return sampleEbooks;
+  try {
+    const parsed = JSON.parse(saved);
+    const nextBooks = Array.isArray(parsed) ? parsed.map((book) => normalizeBook(book)) : sampleEbooks;
+    if (JSON.stringify(nextBooks) !== saved) {
+      window.localStorage.setItem(BOOK_KEY, JSON.stringify(nextBooks));
+    }
+    return nextBooks;
+  } catch {
+    window.localStorage.setItem(BOOK_KEY, JSON.stringify(sampleEbooks));
+    return sampleEbooks;
+  }
+}
+
+export function saveBooks(books: Ebook[]) {
+  window.localStorage.setItem(BOOK_KEY, JSON.stringify(books.map((book) => normalizeBook(book))));
+  window.dispatchEvent(new Event("academy-books-updated"));
+}
+
+export function loadSettings(): SiteSettings {
+  if (typeof window === "undefined") return defaultSettings;
+  const saved = window.localStorage.getItem(SETTINGS_KEY);
+  if (!saved) return defaultSettings;
+  try {
+    const savedSettings = JSON.parse(saved) as Partial<SiteSettings>;
+    const shouldUpgradeOldDefault = savedSettings.whatsappNumber === "15551234567";
+    const nextSettings = {
+      ...defaultSettings,
+      ...savedSettings,
+      whatsappNumber: shouldUpgradeOldDefault ? defaultSettings.whatsappNumber : savedSettings.whatsappNumber || defaultSettings.whatsappNumber,
+      social: {
+        ...defaultSettings.social,
+        ...(savedSettings.social || {})
+      }
+    };
+    if (shouldUpgradeOldDefault || JSON.stringify(nextSettings) !== saved) {
+      window.localStorage.setItem(SETTINGS_KEY, JSON.stringify(nextSettings));
+    }
+    return nextSettings;
+  } catch {
+    window.localStorage.setItem(SETTINGS_KEY, JSON.stringify(defaultSettings));
+    return defaultSettings;
+  }
+}
+
+export function saveSettings(settings: SiteSettings) {
+  window.localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+  window.dispatchEvent(new Event("academy-settings-updated"));
+}
+
+export function imageToDataUrl(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
