@@ -40,6 +40,36 @@ export const coverStyles = [
 
 export const sampleEbooks: Ebook[] = [
   {
+    id: "70ec67c5-0cef-4e50-9c89-fcc4d95c9ed1",
+    title: "100 Powerful AI Prompts That Save You Hours of Work",
+    slug: "100-powerful-ai-prompts-that-save-you-hours-of-work",
+    description: "Unlock the full power of AI with 100 carefully crafted prompts for ChatGPT, Claude, and Grok.",
+    longDescription:
+      "Whether you're an entrepreneur, freelancer, marketer, student, or content creator, these ready-to-use prompts will help you work faster, create better content, solve problems, and boost productivity.\n\nInside you'll discover prompts for:\n- Business and startups\n- Marketing and sales\n- Copywriting\n- Content creation\n- Programming\n- Website building\n- SaaS development\n- Productivity\n- Learning\n- And much more\n\nNo prompt engineering experience required. Just copy, paste, and get amazing results.",
+    price: 3,
+    category: "Artificial Intelligence",
+    cover: assetPath("/assets/ebook-100-powerful-ai-prompts-that-save-you-hours-of-work-cover.png"),
+    gallery: [],
+    features: ["100 ready-to-use AI prompts", "Business and marketing prompts", "SaaS and website prompts", "No prompt experience required"],
+    featured: true,
+    createdAt: "2026-07-04T14:41:43.214Z"
+  },
+  {
+    id: "e3665c52-44e2-42ad-9833-81de0125ca29",
+    title: "AI CONTENT CREATION GUIDE",
+    slug: "ai-content-creation-guide",
+    description: "Create viral content with AI faster than ever for Facebook, TikTok, and YouTube.",
+    longDescription:
+      "Struggling to come up with content ideas?\n\nDiscover the ultimate guide to creating high-quality content for Facebook, TikTok, and YouTube using the power of Artificial Intelligence.\n\nInside this eBook you'll learn:\n- Generate unlimited content ideas in minutes\n- Write viral posts with AI\n- Create engaging TikTok and YouTube scripts\n- Save hours every week\n- Use the best AI tools for content creation\n- Grow your audience faster\n\nPerfect for content creators, small business owners, freelancers, digital marketers, and beginners.\n\nOnly $5.\n\nPayment Method: Binance Pay.\n\nSave time, create better content, and grow your audience with AI. Message now to get your copy instantly!",
+    price: 5,
+    category: "Artificial Intelligence",
+    cover: assetPath("/assets/ebook-ai-acontent-creation-guide-cover.png"),
+    gallery: [],
+    features: ["Unlimited content ideas", "Viral post prompts", "TikTok and YouTube scripts", "Best AI tools for creators"],
+    featured: true,
+    createdAt: "2026-07-04T14:38:50.445Z"
+  },
+  {
     id: "how-to-build-an-ai-saas-business-without-coding",
     title: "How to Build an AI SaaS Business Without Coding",
     slug: "how-to-build-an-ai-saas-business-without-coding",
@@ -59,96 +89,6 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-03T18:45:00.000Z"
-  },
-  {
-    id: "ai-agency-playbook",
-    title: "AI Agency Playbook",
-    slug: "ai-agency-playbook",
-    description: "Launch paid AI services with repeatable offers, client workflows, and delivery templates.",
-    longDescription:
-      "A practical blueprint for turning AI skills into a lean service business. Learn how to package offers, qualify clients, automate delivery, and build a premium operating system for recurring revenue.",
-    price: 29,
-    category: "Artificial Intelligence",
-    cover: "",
-    gallery: [],
-    features: ["Offer design templates", "Client onboarding scripts", "Automation stack map", "Delivery SOPs"],
-    featured: true,
-    createdAt: "2026-07-01T12:00:00.000Z"
-  },
-  {
-    id: "micro-saas-from-zero",
-    title: "Micro SaaS From Zero",
-    slug: "micro-saas-from-zero",
-    description: "Validate, build, price, and sell a focused SaaS product without a large team.",
-    longDescription:
-      "Go from niche idea to revenue-ready micro SaaS using buyer research, lightweight product design, pricing systems, and launch sequences built for solo founders.",
-    price: 39,
-    category: "SaaS",
-    cover: "",
-    gallery: [],
-    features: ["Niche research framework", "MVP scope planner", "Pricing calculator", "Launch checklist"],
-    featured: true,
-    createdAt: "2026-06-25T12:00:00.000Z"
-  },
-  {
-    id: "no-code-automation-stack",
-    title: "No-Code Automation Stack",
-    slug: "no-code-automation-stack",
-    description: "Build automated systems with no-code tools for leads, sales, delivery, and reporting.",
-    longDescription:
-      "A field guide for building dependable no-code workflows. Includes automation maps, tool selection principles, error handling patterns, and business-ready workflow examples.",
-    price: 24,
-    category: "No-Code",
-    cover: "",
-    gallery: [],
-    features: ["Workflow diagrams", "Tool comparison matrix", "Testing checklist", "Maintenance routines"],
-    featured: false,
-    createdAt: "2026-06-20T12:00:00.000Z"
-  },
-  {
-    id: "automation-profit-systems",
-    title: "Automation Profit Systems",
-    slug: "automation-profit-systems",
-    description: "Design automations that reduce busywork and unlock new digital product revenue.",
-    longDescription:
-      "Learn how to audit repetitive tasks, build automations that create leverage, and turn internal workflows into sellable templates or service packages.",
-    price: 34,
-    category: "Automation",
-    cover: "",
-    gallery: [],
-    features: ["Automation audit sheet", "Revenue model examples", "Prompt libraries", "QA playbooks"],
-    featured: true,
-    createdAt: "2026-06-12T12:00:00.000Z"
-  },
-  {
-    id: "online-business-systems",
-    title: "Online Business Systems",
-    slug: "online-business-systems",
-    description: "Create a durable digital business with funnels, content, offers, and operating metrics.",
-    longDescription:
-      "A clear operating guide for building online income around digital knowledge products, simple funnels, audience growth, and repeatable weekly execution.",
-    price: 19,
-    category: "Online Business",
-    cover: "",
-    gallery: [],
-    features: ["Funnel maps", "Content calendar", "Metrics dashboard", "Offer upgrade prompts"],
-    featured: false,
-    createdAt: "2026-05-30T12:00:00.000Z"
-  },
-  {
-    id: "prompt-engineering-for-founders",
-    title: "Prompt Engineering for Founders",
-    slug: "prompt-engineering-for-founders",
-    description: "Use prompts to research markets, create offers, write content, and improve operations.",
-    longDescription:
-      "A founder-focused prompt library and operating method for using AI as a research, strategy, content, and execution partner across your business.",
-    price: 22,
-    category: "Artificial Intelligence",
-    cover: "",
-    gallery: [],
-    features: ["Prompt vault", "Research workflows", "Content systems", "Decision frameworks"],
-    featured: false,
-    createdAt: "2026-05-18T12:00:00.000Z"
   }
 ];
 
