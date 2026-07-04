@@ -29,9 +29,6 @@ export default function HomePage() {
                 Browse eBooks
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/admin" className="inline-flex items-center justify-center rounded-md border border-white/12 bg-white/5 px-5 py-3 font-semibold text-white backdrop-blur transition hover:bg-white/10">
-                Admin Dashboard
-              </Link>
             </div>
             <HomeSettingsBanner />
             <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">

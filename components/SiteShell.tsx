@@ -12,8 +12,7 @@ const nav = [
   ["Home", "/"],
   ["eBooks", "/ebooks"],
   ["About", "/about"],
-  ["Contact", "/contact"],
-  ["Admin", "/admin"]
+  ["Contact", "/contact"]
 ];
 
 export function Header() {
