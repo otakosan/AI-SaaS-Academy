@@ -1,6 +1,6 @@
 "use client";
 
-import { Edit3, Eye, ImagePlus, Plus, Save, Star, Trash2 } from "lucide-react";
+import { Copy, Edit3, Eye, ImagePlus, Plus, Save, Star, Trash2 } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { categories, defaultSettings, Ebook, formatPrice, SiteSettings, slugify } from "@/lib/data";
 import { imageToDataUrl, loadBooks, loadSettings, saveBooks, saveSettings } from "@/lib/store";
@@ -33,6 +33,7 @@ export function AdminDashboard() {
   const [settings, setSettings] = useState<SiteSettings>(defaultSettings);
   const [bookStatus, setBookStatus] = useState("");
   const [settingsStatus, setSettingsStatus] = useState("");
+  const [exportStatus, setExportStatus] = useState("");
 
   useEffect(() => {
     setBooks(loadBooks());
@@ -112,6 +113,22 @@ export function AdminDashboard() {
     window.setTimeout(() => setSettingsStatus(""), 2500);
   }
 
+  async function copyPublicData() {
+    const publicData = {
+      books,
+      settings,
+      exportedAt: new Date().toISOString()
+    };
+    const text = JSON.stringify(publicData);
+    try {
+      await navigator.clipboard.writeText(text);
+      setExportStatus("Public data copied. Paste it into Codex.");
+    } catch {
+      setExportStatus("Copy blocked. Select and copy the data below.");
+    }
+    window.setTimeout(() => setExportStatus(""), 6000);
+  }
+
   if (!loggedIn) {
     return (
       <main className="mx-auto flex min-h-[calc(100vh-64px)] max-w-md items-center px-4 py-16">
@@ -142,6 +159,20 @@ export function AdminDashboard() {
           </div>
         ))}
       </div>
+      <section className="mt-8 rounded-lg border border-blue-300/20 bg-blue-400/10 p-5 backdrop-blur">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="text-xl font-semibold text-white">Publish Current Admin Data</h2>
+            <p className="mt-2 text-sm leading-6 text-white/65">Copy the books, images, prices, and settings from this browser so they can be added to the public GitHub website for every device.</p>
+          </div>
+          <button type="button" onClick={copyPublicData} className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-4 py-3 font-semibold text-ink">
+            <Copy className="h-4 w-4" />
+            Copy public data
+          </button>
+        </div>
+        {exportStatus && <p className="mt-4 rounded-md border border-emerald-300/20 bg-emerald-400/10 px-3 py-2 text-sm text-emerald-100">{exportStatus}</p>}
+        <textarea readOnly value={JSON.stringify({ books, settings })} className="mt-4 h-24 w-full rounded-md border border-white/10 bg-black/25 px-3 py-2 text-xs text-white/65 outline-none" />
+      </section>
       <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <form onSubmit={submitBook} className="rounded-lg border border-white/10 bg-white/[0.05] p-5 backdrop-blur">
           <h2 className="mb-5 flex items-center gap-2 text-xl font-semibold text-white"><Plus className="h-5 w-5" /> Add / Edit eBook</h2>
