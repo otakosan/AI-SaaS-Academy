@@ -7,7 +7,7 @@ import { assetPath } from "@/lib/paths";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aisaasacademy.com"),
+  metadataBase: new URL("https://aithv.com"),
   title: {
     default: "AI SaaS Academy | Premium AI Business eBooks",
     template: "%s | AI SaaS Academy"

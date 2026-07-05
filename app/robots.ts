@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://aisaasacademy.com/sitemap.xml"
+    sitemap: "https://aithv.com/sitemap.xml"
   };
 }
