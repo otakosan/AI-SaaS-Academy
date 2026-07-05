@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://aithv.com/sitemap.xml"
+    sitemap: "https://www.aithv.com/sitemap.xml"
   };
 }
