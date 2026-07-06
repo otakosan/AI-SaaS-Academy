@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, BookOpen, BrainCircuit, Workflow } from "lucide-react";
 import { BookCatalog } from "@/components/BookCatalog";
 import { HomeSettingsBanner } from "@/components/HomeSettingsBanner";
+import { freeEbooks } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
 
 const stats = [
@@ -55,6 +56,29 @@ export default function HomePage() {
           <Link href="/ebooks" className="text-sm font-semibold text-blue-200 hover:text-white">View full catalog</Link>
         </div>
         <BookCatalog featuredOnly />
+      </section>
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-lg border border-cyan-200/15 bg-cyan-200/[0.04] backdrop-blur">
+          <div className="grid gap-8 p-6 md:grid-cols-[0.8fr_1.2fr] md:p-8">
+            <div>
+              <p className="text-sm font-medium text-cyan-200">Free eBooks</p>
+              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Read practical AI business guides for free</h2>
+              <p className="mt-4 text-sm leading-6 text-white/62">Open PDF guides directly in your browser and learn AI, SaaS, automation, prompts, and digital product strategy.</p>
+              <Link href="/free-ebooks" className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-blue-100">
+                Browse free eBooks
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {freeEbooks.slice(0, 4).map((book) => (
+                <Link key={book.id} href={`/free-ebooks/${book.slug}`} className="rounded-lg border border-white/10 bg-white/[0.04] p-4 transition hover:border-cyan-200/30 hover:bg-white/[0.08]">
+                  <p className="text-xs font-medium text-cyan-100">{book.category}</p>
+                  <h3 className="mt-2 text-sm font-semibold leading-6 text-white">{book.title}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="grid gap-4 md:grid-cols-3">

@@ -27,6 +27,16 @@ export type SiteSettings = {
   };
 };
 
+export type FreeEbook = {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  file: string;
+  pages: string;
+};
+
 export const categories = ["Artificial Intelligence", "SaaS", "No-Code", "Automation", "Online Business"];
 
 export const coverStyles = [
@@ -103,6 +113,99 @@ export const defaultSettings: SiteSettings = {
     youtube: "https://youtube.com"
   }
 };
+
+export const freeEbooks: FreeEbook[] = [
+  {
+    id: "01-build-your-first-ai-micro-saas",
+    title: "Build Your First AI Micro SaaS",
+    slug: "build-your-first-ai-micro-saas",
+    description: "A beginner-friendly roadmap for turning one useful AI idea into a focused micro SaaS offer.",
+    category: "SaaS",
+    file: assetPath("/free-ebooks/01-build-your-first-ai-micro-saas.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "02-digital-products-that-sell-while-you-sleep",
+    title: "Digital Products That Sell While You Sleep",
+    slug: "digital-products-that-sell-while-you-sleep",
+    description: "Learn how to package knowledge into simple digital products with clear offers and automated delivery.",
+    category: "Online Business",
+    file: assetPath("/free-ebooks/02-digital-products-that-sell-while-you-sleep.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "03-prompt-engineering-for-profit",
+    title: "Prompt Engineering for Profit",
+    slug: "prompt-engineering-for-profit",
+    description: "Practical prompt systems for creating content, offers, workflows, and client-ready AI outputs.",
+    category: "Artificial Intelligence",
+    file: assetPath("/free-ebooks/03-prompt-engineering-for-profit.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "04-ai-automation-agency-starter-kit",
+    title: "AI Automation Agency Starter Kit",
+    slug: "ai-automation-agency-starter-kit",
+    description: "A starter guide for building automation services that help businesses save time and operate faster.",
+    category: "Automation",
+    file: assetPath("/free-ebooks/04-ai-automation-agency-starter-kit.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "05-from-code-to-cashflow",
+    title: "From Code to Cashflow",
+    slug: "from-code-to-cashflow",
+    description: "A practical path from building useful tools to turning them into paid products or services.",
+    category: "Online Business",
+    file: assetPath("/free-ebooks/05-from-code-to-cashflow.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "06-build-and-sell-ai-templates",
+    title: "Build and Sell AI Templates",
+    slug: "build-and-sell-ai-templates",
+    description: "Create reusable AI templates, package them clearly, and sell them to a focused audience.",
+    category: "Artificial Intelligence",
+    file: assetPath("/free-ebooks/06-build-and-sell-ai-templates.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "07-micro-saas-ideas-for-boring-businesses",
+    title: "Micro SaaS Ideas for Boring Businesses",
+    slug: "micro-saas-ideas-for-boring-businesses",
+    description: "Find simple software opportunities inside everyday business problems and overlooked niches.",
+    category: "SaaS",
+    file: assetPath("/free-ebooks/07-micro-saas-ideas-for-boring-businesses.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "08-ai-freelancer-product-ladder",
+    title: "AI Freelancer Product Ladder",
+    slug: "ai-freelancer-product-ladder",
+    description: "Design low-ticket, mid-ticket, and premium AI services that can grow into digital products.",
+    category: "Online Business",
+    file: assetPath("/free-ebooks/08-ai-freelancer-product-ladder.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "09-build-useful-ai-tools-with-apis",
+    title: "Build Useful AI Tools With APIs",
+    slug: "build-useful-ai-tools-with-apis",
+    description: "Understand how AI APIs can power helpful tools, workflows, and SaaS features.",
+    category: "Artificial Intelligence",
+    file: assetPath("/free-ebooks/09-build-useful-ai-tools-with-apis.pdf"),
+    pages: "Free PDF"
+  },
+  {
+    id: "10-zero-audience-to-first-digital-product-sale",
+    title: "Zero Audience to First Digital Product Sale",
+    slug: "zero-audience-to-first-digital-product-sale",
+    description: "A focused playbook for choosing an offer, finding buyers, and getting your first sale.",
+    category: "Online Business",
+    file: assetPath("/free-ebooks/10-zero-audience-to-first-digital-product-sale.pdf"),
+    pages: "Free PDF"
+  }
+];
 
 export function slugify(value: string) {
   return value

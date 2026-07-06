@@ -11,6 +11,7 @@ import { loadSettings } from "@/lib/store";
 const nav = [
   ["Home", "/"],
   ["eBooks", "/ebooks"],
+  ["Free eBooks", "/free-ebooks"],
   ["About", "/about"],
   ["Contact", "/contact"]
 ];
