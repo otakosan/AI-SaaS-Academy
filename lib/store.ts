@@ -50,17 +50,19 @@ export function loadSettings(): SiteSettings {
   if (!saved) return defaultSettings;
   try {
     const savedSettings = JSON.parse(saved) as Partial<SiteSettings>;
-    const shouldUpgradeOldDefault = savedSettings.whatsappNumber === "15551234567";
+    const shouldUpgradeOldWhatsapp = savedSettings.whatsappNumber === "15551234567";
+    const shouldUpgradeOldEmail = savedSettings.email === "hello@aisaasacademy.com";
     const nextSettings = {
       ...defaultSettings,
       ...savedSettings,
-      whatsappNumber: shouldUpgradeOldDefault ? defaultSettings.whatsappNumber : savedSettings.whatsappNumber || defaultSettings.whatsappNumber,
+      whatsappNumber: shouldUpgradeOldWhatsapp ? defaultSettings.whatsappNumber : savedSettings.whatsappNumber || defaultSettings.whatsappNumber,
+      email: shouldUpgradeOldEmail ? defaultSettings.email : savedSettings.email || defaultSettings.email,
       social: {
         ...defaultSettings.social,
         ...(savedSettings.social || {})
       }
     };
-    if (shouldUpgradeOldDefault || JSON.stringify(nextSettings) !== saved) {
+    if (shouldUpgradeOldWhatsapp || shouldUpgradeOldEmail || JSON.stringify(nextSettings) !== saved) {
       window.localStorage.setItem(SETTINGS_KEY, JSON.stringify(nextSettings));
     }
     return nextSettings;
