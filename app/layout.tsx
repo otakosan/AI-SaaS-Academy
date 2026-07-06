@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Footer, Header } from "@/components/SiteShell";
 import { assetPath } from "@/lib/paths";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const googleAnalyticsId = "G-M6QYPFMEJN";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aithv.com"),
@@ -33,6 +35,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`} strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsId}');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(54,97,255,0.28),transparent_32%),radial-gradient(circle_at_80%_10%,rgba(166,75,255,0.24),transparent_28%),#060914]">
           <Header />
