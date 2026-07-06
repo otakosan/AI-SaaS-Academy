@@ -104,7 +104,7 @@ export const sampleEbooks: Ebook[] = [
 
 export const defaultSettings: SiteSettings = {
   whatsappNumber: "212638932070",
-  email: "hello@aisaasacademy.com",
+  email: "otakohakim2@gmail.com",
   bannerTitle: "Premium AI business playbooks for builders",
   bannerSubtitle: "Practical eBooks for launching smarter offers, workflows, and SaaS ideas.",
   social: {
