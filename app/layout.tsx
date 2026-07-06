@@ -6,7 +6,7 @@ import { Footer, Header } from "@/components/SiteShell";
 import { assetPath } from "@/lib/paths";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const googleAnalyticsId = "G-M6QYPFMEJN";
+const googleAnalyticsId = "G-6PTCLE8QRP";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aithv.com"),
