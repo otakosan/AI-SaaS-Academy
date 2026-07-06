@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Ways to Make Money With AI Table of Contents</title>
+  <desc id="desc">A clean table of contents image listing 25 AI business chapters and page numbers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fbf5"/>
+      <stop offset="1" stop-color="#eef8f6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#0ea5a4"/>
+      <stop offset="1" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#020617" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="760" height="1040" fill="#061022"/>
+  <rect x="36" y="36" width="688" height="968" rx="28" fill="url(#bg)" filter="url(#shadow)"/>
+  <rect x="72" y="84" width="112" height="8" rx="4" fill="url(#accent)"/>
+  <text x="72" y="150" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">Table of Contents</text>
+  <text x="72" y="190" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">Ways to Make Money With AI • 500-page playbook</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">
+    <g fill="#0f766e">
+      <text x="82" y="246">01</text><text x="82" y="276">02</text><text x="82" y="306">03</text><text x="82" y="336">04</text><text x="82" y="366">05</text>
+      <text x="82" y="396">06</text><text x="82" y="426">07</text><text x="82" y="456">08</text><text x="82" y="486">09</text><text x="82" y="516">10</text>
+      <text x="82" y="546">11</text><text x="82" y="576">12</text><text x="82" y="606">13</text><text x="82" y="636">14</text><text x="82" y="666">15</text>
+      <text x="82" y="696">16</text><text x="82" y="726">17</text><text x="82" y="756">18</text><text x="82" y="786">19</text><text x="82" y="816">20</text>
+      <text x="82" y="846">21</text><text x="82" y="876">22</text><text x="82" y="906">23</text><text x="82" y="936">24</text><text x="82" y="966">25</text>
+    </g>
+    <g fill="#111827" font-size="16">
+      <text x="128" y="246">AI Money Foundations</text><text x="128" y="276">Prompt Engineering Services</text><text x="128" y="306">AI Content Studio</text>
+      <text x="128" y="336">Short-Form Video With AI</text><text x="128" y="366">AI Copywriting Offers</text><text x="128" y="396">AI Automation Agency</text>
+      <text x="128" y="426">Chatbots and Support Assistants</text><text x="128" y="456">AI Research and Lead Lists</text><text x="128" y="486">AI Resume and Career Products</text>
+      <text x="128" y="516">Digital Products and Templates</text><text x="128" y="546">AI Courses and Workshops</text><text x="128" y="576">AI Newsletter Business</text>
+      <text x="128" y="606">AI Affiliate and Review Sites</text><text x="128" y="636">Niche Data Products</text><text x="128" y="666">AI Image and Design Products</text>
+      <text x="128" y="696">AI Voice, Audio, and Podcasting</text><text x="128" y="726">AI for Local Businesses</text><text x="128" y="756">AI for Real Estate</text>
+      <text x="128" y="786">AI for Coaches and Consultants</text><text x="128" y="816">Micro-SaaS With AI</text><text x="128" y="846">APIs, Agents, and Integrations</text>
+      <text x="128" y="876">AI Productized Services</text><text x="128" y="906">Pricing, Sales, and Proof</text><text x="128" y="936">Risk, Quality, and Trust</text>
+      <text x="128" y="966">90-Day Execution Plan</text>
+    </g>
+    <g fill="#64748b" font-size="16" text-anchor="end">
+      <text x="666" y="246">5</text><text x="666" y="276">25</text><text x="666" y="306">45</text><text x="666" y="336">65</text><text x="666" y="366">85</text>
+      <text x="666" y="396">105</text><text x="666" y="426">125</text><text x="666" y="456">145</text><text x="666" y="486">165</text><text x="666" y="516">185</text>
+      <text x="666" y="546">205</text><text x="666" y="576">225</text><text x="666" y="606">245</text><text x="666" y="636">265</text><text x="666" y="666">285</text>
+      <text x="666" y="696">305</text><text x="666" y="726">325</text><text x="666" y="756">345</text><text x="666" y="786">365</text><text x="666" y="816">385</text>
+      <text x="666" y="846">405</text><text x="666" y="876">425</text><text x="666" y="906">445</text><text x="666" y="936">465</text><text x="666" y="966">485</text>
+    </g>
+  </g>
+</svg>
