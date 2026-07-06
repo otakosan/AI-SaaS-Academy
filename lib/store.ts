@@ -5,7 +5,7 @@ import { defaultSettings, Ebook, sampleEbooks, SiteSettings } from "@/lib/data";
 const BOOK_KEY = "ai-saas-academy-books";
 const SETTINGS_KEY = "ai-saas-academy-settings";
 const CATALOG_VERSION_KEY = "ai-saas-academy-catalog-version";
-const CURRENT_CATALOG_VERSION = "2026-07-06-ways-to-make-money-with-ai";
+const CURRENT_CATALOG_VERSION = "2026-07-06-ways-to-make-money-with-ai-cover";
 const catalogUpdateBookIds = ["ways-to-make-money-with-ai-500-pages"];
 
 function normalizeBook(book: Partial<Ebook>, fallback?: Ebook): Ebook {
@@ -34,8 +34,11 @@ export function loadBooks(): Ebook[] {
     let nextBooks = Array.isArray(parsed) ? parsed.map((book) => normalizeBook(book)) : sampleEbooks;
     const savedVersion = window.localStorage.getItem(CATALOG_VERSION_KEY);
     if (savedVersion !== CURRENT_CATALOG_VERSION) {
-      const missingCatalogBooks = sampleEbooks.filter((book) => catalogUpdateBookIds.includes(book.id) && !nextBooks.some((item) => item.id === book.id));
-      nextBooks = [...missingCatalogBooks, ...nextBooks];
+      const catalogUpdates = sampleEbooks.filter((book) => catalogUpdateBookIds.includes(book.id));
+      nextBooks = [
+        ...catalogUpdates,
+        ...nextBooks.filter((book) => !catalogUpdateBookIds.includes(book.id))
+      ];
       window.localStorage.setItem(CATALOG_VERSION_KEY, CURRENT_CATALOG_VERSION);
     }
     if (JSON.stringify(nextBooks) !== saved) {

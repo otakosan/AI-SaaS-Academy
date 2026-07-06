@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Ebook, formatPrice } from "@/lib/data";
+import { assetPath } from "@/lib/paths";
 import { loadBooks, loadSettings } from "@/lib/store";
 import { BookCover } from "@/components/BookCover";
 
@@ -62,6 +63,18 @@ export function BookDetailClient({ slug }: { slug: string }) {
               </div>
             ))}
           </div>
+          {book.gallery.length > 0 && (
+            <div className="mt-8">
+              <h2 className="text-xl font-semibold text-white">Preview images</h2>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                {book.gallery.map((image, index) => (
+                  <div key={image} className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] p-2 backdrop-blur">
+                    <img src={assetPath(image)} alt={`${book.title} preview ${index + 1}`} className="h-full w-full rounded-md object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </main>

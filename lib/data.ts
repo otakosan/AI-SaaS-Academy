@@ -59,7 +59,7 @@ export const sampleEbooks: Ebook[] = [
       "Ways to Make Money With AI is a complete 500-page guide for turning AI skills, tools, and workflows into real online business opportunities. It is built for beginners, freelancers, creators, consultants, and entrepreneurs who want clear ways to make money with AI instead of random ideas.\n\nInside you will learn AI money foundations, prompt engineering services, AI content studios, short-form video with AI, copywriting offers, automation agencies, chatbots, lead lists, digital products, AI courses, newsletters, affiliate sites, niche data products, AI design products, voice and podcasting offers, local business services, real estate use cases, coach and consultant offers, micro-SaaS ideas, APIs, agents, productized services, pricing, sales, proof, risk management, and a 90-day execution plan.\n\nThis eBook is 500 pages and is available for $15. Payment method: Binance Pay. Once payment is confirmed, the eBook will be sent immediately.",
     price: 15,
     category: "Online Business",
-    cover: assetPath("/assets/ways-to-make-money-with-ai-table-of-contents.svg"),
+    cover: assetPath("/assets/ways-to-make-money-with-ai-cover.svg"),
     gallery: [assetPath("/assets/ways-to-make-money-with-ai-table-of-contents.svg")],
     features: [
       "500-page AI money-making playbook",
