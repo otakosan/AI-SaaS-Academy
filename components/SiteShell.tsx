@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Facebook, Linkedin, Menu, X, Youtube } from "lucide-react";
 import { useEffect, useState } from "react";
 import { defaultSettings, SiteSettings } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
@@ -58,6 +58,11 @@ export function Header() {
 
 export function Footer() {
   const [settings, setSettings] = useState<SiteSettings>(defaultSettings);
+  const socialLinks = [
+    ["Facebook", settings.social.facebook, Facebook],
+    ["LinkedIn", settings.social.linkedin, Linkedin],
+    ["YouTube", settings.social.youtube, Youtube]
+  ] as const;
 
   useEffect(() => {
     const sync = () => setSettings(loadSettings());
@@ -86,10 +91,17 @@ export function Footer() {
         <div className="text-sm text-white/60">
           <p className="mb-3 font-medium text-white">Social</p>
           <div className="flex gap-3">
-            {["X", "in", "YT"].map((item) => (
-              <span key={item} className="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/5 text-xs font-semibold text-white">
-                {item}
-              </span>
+            {socialLinks.map(([label, href, Icon]) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/5 text-white transition hover:border-cyan-200/30 hover:bg-white/10"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
             ))}
           </div>
           <p className="mt-5">Copyright 2026 AI SaaS Academy.</p>

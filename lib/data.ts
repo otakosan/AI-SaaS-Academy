@@ -21,6 +21,7 @@ export type SiteSettings = {
   bannerTitle: string;
   bannerSubtitle: string;
   social: {
+    facebook: string;
     x: string;
     linkedin: string;
     youtube: string;
@@ -108,6 +109,7 @@ export const defaultSettings: SiteSettings = {
   bannerTitle: "Premium AI business playbooks for builders",
   bannerSubtitle: "Practical eBooks for launching smarter offers, workflows, and SaaS ideas.",
   social: {
+    facebook: "https://www.facebook.com/share/1JJTM9UzSF/",
     x: "https://x.com",
     linkedin: "https://linkedin.com",
     youtube: "https://youtube.com"
