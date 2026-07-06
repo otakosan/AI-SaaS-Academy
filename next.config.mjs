@@ -6,6 +6,7 @@ const nextConfig = {
   trailingSlash: true,
   basePath,
   assetPrefix: basePath ? `${basePath}/` : undefined,
+  generateBuildId: async () => "ai-saas-academy",
   images: {
     unoptimized: true
   }
