@@ -51,6 +51,28 @@ export const coverStyles = [
 
 export const sampleEbooks: Ebook[] = [
   {
+    id: "ways-to-make-money-with-ai-500-pages",
+    title: "Ways to Make Money With AI",
+    slug: "ways-to-make-money-with-ai-500-pages",
+    description: "A massive 500-page AI income playbook with 25 practical business models, offers, and execution plans.",
+    longDescription:
+      "Ways to Make Money With AI is a complete 500-page guide for turning AI skills, tools, and workflows into real online business opportunities. It is built for beginners, freelancers, creators, consultants, and entrepreneurs who want clear ways to make money with AI instead of random ideas.\n\nInside you will learn AI money foundations, prompt engineering services, AI content studios, short-form video with AI, copywriting offers, automation agencies, chatbots, lead lists, digital products, AI courses, newsletters, affiliate sites, niche data products, AI design products, voice and podcasting offers, local business services, real estate use cases, coach and consultant offers, micro-SaaS ideas, APIs, agents, productized services, pricing, sales, proof, risk management, and a 90-day execution plan.\n\nThis eBook is 500 pages and is available for $15. Payment method: Binance Pay. Once payment is confirmed, the eBook will be sent immediately.",
+    price: 15,
+    category: "Online Business",
+    cover: assetPath("/assets/ways-to-make-money-with-ai-table-of-contents.svg"),
+    gallery: [assetPath("/assets/ways-to-make-money-with-ai-table-of-contents.svg")],
+    features: [
+      "500-page AI money-making playbook",
+      "25 practical AI business models",
+      "Includes AI services, products, agencies, and micro-SaaS",
+      "Pricing, sales, proof, and risk guidance",
+      "90-day execution plan",
+      "Payment method: Binance Pay"
+    ],
+    featured: true,
+    createdAt: "2026-07-06T16:00:00.000Z"
+  },
+  {
     id: "70ec67c5-0cef-4e50-9c89-fcc4d95c9ed1",
     title: "100 Powerful AI Prompts That Save You Hours of Work",
     slug: "100-powerful-ai-prompts-that-save-you-hours-of-work",
