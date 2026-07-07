@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...pages, ...ebookPages, ...freeEbookPages].map((path) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date()
+    lastModified: new Date(),
+    changeFrequency: path === "" || path === "/ebooks" ? "weekly" : "monthly",
+    priority: path === "" ? 1 : path.startsWith("/ebooks/") ? 0.9 : path === "/ebooks" ? 0.95 : 0.7
   }));
 }

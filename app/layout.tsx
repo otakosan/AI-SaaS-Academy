@@ -12,20 +12,23 @@ const siteUrl = "https://aithv.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "AI SaaS Academy | Premium AI Business eBooks",
+    default: "AI SaaS Academy | AI SaaS, No-Code & Online Business eBooks",
     template: "%s | AI SaaS Academy"
   },
-  description: "Learn AI, SaaS, no-code, automation, and online business through practical digital eBooks.",
+  description: "Learn how to build AI SaaS businesses, use no-code tools, automate workflows, and make money with AI through practical digital eBooks.",
   applicationName: "AI SaaS Academy",
   category: "education",
   keywords: [
-    "AI eBooks",
-    "AI SaaS",
-    "No-Code",
-    "Automation",
-    "Online Business",
-    "AI business guides",
-    "SaaS eBooks"
+    "AI SaaS ebook",
+    "AI SaaS business ebook",
+    "build AI SaaS without coding",
+    "no-code SaaS ebook",
+    "make money with AI ebook",
+    "AI automation ebook",
+    "AI business for beginners",
+    "online business ebook",
+    "prompt engineering ebook",
+    "AI SaaS Academy"
   ],
   alternates: {
     canonical: "/"
@@ -43,8 +46,8 @@ export const metadata: Metadata = {
     apple: assetPath("/assets/ai-saas-academy-logo.jpeg")
   },
   openGraph: {
-    title: "AI SaaS Academy",
-    description: "Premium practical eBooks for building AI-powered online businesses faster.",
+    title: "AI SaaS Academy | AI SaaS & No-Code Business eBooks",
+    description: "Practical eBooks for building AI SaaS products, no-code businesses, automation offers, and AI-powered online income streams.",
     url: siteUrl,
     siteName: "AI SaaS Academy",
     type: "website",
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI SaaS Academy",
+    title: "AI SaaS Academy | AI SaaS & No-Code Business eBooks",
     description: "Build your AI business faster with practical digital eBooks."
   }
 };

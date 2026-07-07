@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { ArrowUpDown, Search, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { categories, Ebook, formatPrice } from "@/lib/data";
+import { categories, Ebook, formatPrice, sampleEbooks } from "@/lib/data";
 import { loadBooks } from "@/lib/store";
 import { BookCover } from "@/components/BookCover";
 
 type SortMode = "newest" | "price-low" | "price-high";
 
 export function BookCatalog({ featuredOnly = false }: { featuredOnly?: boolean }) {
-  const [books, setBooks] = useState<Ebook[]>([]);
+  const [books, setBooks] = useState<Ebook[]>(sampleEbooks);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState<SortMode>("newest");
@@ -74,7 +74,7 @@ export function BookCatalog({ featuredOnly = false }: { featuredOnly?: boolean }
               </div>
               <h3 className="text-lg font-semibold text-white">{book.title}</h3>
               <p className="mt-2 min-h-12 text-sm leading-6 text-white/58">{book.description}</p>
-              <Link href={`/ebook-details?slug=${encodeURIComponent(book.slug)}`} className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-blue-100">
+              <Link href={`/ebooks/${book.slug}`} className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-blue-100">
                 View Details
               </Link>
             </div>

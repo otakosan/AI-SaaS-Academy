@@ -219,7 +219,7 @@ export function AdminDashboard() {
                   <p className="text-sm text-white/55">{book.category} / {formatPrice(book.price)} {book.featured ? "/ Featured" : ""}</p>
                 </div>
                 <div className="flex gap-2">
-                  <a href={`/ebook-details?slug=${encodeURIComponent(book.slug)}`} className="rounded-md border border-white/10 p-2 text-white/70 hover:text-white" aria-label="View"><Eye className="h-4 w-4" /></a>
+                  <a href={`/ebooks/${book.slug}`} className="rounded-md border border-white/10 p-2 text-white/70 hover:text-white" aria-label="View"><Eye className="h-4 w-4" /></a>
                   <button onClick={() => setEditing(book)} className="rounded-md border border-white/10 p-2 text-white/70 hover:text-white" aria-label="Edit"><Edit3 className="h-4 w-4" /></button>
                   <button onClick={() => {
                     const updated = books.map((item) => item.id === book.id ? { ...item, featured: !item.featured } : item);
