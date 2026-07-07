@@ -13,17 +13,28 @@ type PageProps = {
 };
 
 const siteUrl = "https://aithv.com";
+const slugAliases: Record<string, string> = {
+  "ai-acontent-creation-guide": "ai-content-creation-guide"
+};
 
 function absoluteUrl(path: string) {
   return new URL(path, siteUrl).toString();
 }
 
+function resolveBook(slug: string) {
+  const resolvedSlug = slugAliases[slug] || slug;
+  return sampleEbooks.find((item) => item.slug === resolvedSlug);
+}
+
 export function generateStaticParams() {
-  return sampleEbooks.map((book) => ({ slug: book.slug }));
+  return [
+    ...sampleEbooks.map((book) => ({ slug: book.slug })),
+    ...Object.keys(slugAliases).map((slug) => ({ slug }))
+  ];
 }
 
 export function generateMetadata({ params }: PageProps): Metadata {
-  const book = sampleEbooks.find((item) => item.slug === params.slug);
+  const book = resolveBook(params.slug);
 
   if (!book) {
     return {
@@ -57,7 +68,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
 }
 
 export default function EbookDetailPage({ params }: PageProps) {
-  const book = sampleEbooks.find((item) => item.slug === params.slug);
+  const book = resolveBook(params.slug);
 
   if (!book) notFound();
 
