@@ -7,14 +7,37 @@ import { assetPath } from "@/lib/paths";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const googleAnalyticsId = "G-6PTCLE8QRP";
+const siteUrl = "https://aithv.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.aithv.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "AI SaaS Academy | Premium AI Business eBooks",
     template: "%s | AI SaaS Academy"
   },
   description: "Learn AI, SaaS, no-code, automation, and online business through practical digital eBooks.",
+  applicationName: "AI SaaS Academy",
+  category: "education",
+  keywords: [
+    "AI eBooks",
+    "AI SaaS",
+    "No-Code",
+    "Automation",
+    "Online Business",
+    "AI business guides",
+    "SaaS eBooks"
+  ],
+  alternates: {
+    canonical: "/"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true
+    }
+  },
   icons: {
     icon: assetPath("/assets/ai-saas-academy-logo.jpeg"),
     apple: assetPath("/assets/ai-saas-academy-logo.jpeg")
@@ -22,7 +45,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI SaaS Academy",
     description: "Premium practical eBooks for building AI-powered online businesses faster.",
+    url: siteUrl,
+    siteName: "AI SaaS Academy",
     type: "website",
+    locale: "en_US",
     images: [assetPath("/assets/ai-saas-academy-logo.jpeg")]
   },
   twitter: {
@@ -36,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <meta httpEquiv="content-language" content="en-US" />
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
