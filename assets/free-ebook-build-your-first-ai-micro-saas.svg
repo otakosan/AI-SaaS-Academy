@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient><radialGradient id="r" cx=".25" cy=".15" r=".75"><stop stop-color="#ffffff" stop-opacity=".32"/><stop offset="1" stop-color="#020617" stop-opacity="0"/></radialGradient></defs>
+  <rect width="900" height="1200" fill="#050816"/><rect width="900" height="1200" fill="url(#g)" opacity=".88"/><rect width="900" height="1200" fill="url(#r)"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".18"><path d="M90 210h720M90 990h720"/><path d="M160 260h180v120h170v130h170" stroke-width="8"/><path d="M230 760h440" stroke-width="4"/><circle cx="680" cy="510" r="52" stroke-width="8"/></g>
+  <rect x="74" y="72" width="752" height="1056" rx="48" fill="#020617" opacity=".42" stroke="#fff" stroke-opacity=".18"/>
+  <text x="110" y="150" fill="#a5f3fc" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="5">FREE GUIDE 01</text>
+  <text x="110" y="300" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="78" font-weight="800">Build Your</text>
+  <text x="110" y="390" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="78" font-weight="800">First AI</text>
+  <text x="110" y="480" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="78" font-weight="800">Micro SaaS</text>
+  <text x="110" y="585" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">Turn one useful AI idea into a</text>
+  <text x="110" y="628" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">focused software-style offer.</text>
+  <g transform="translate(110 760)"><rect width="230" height="150" rx="24" fill="#fff" opacity=".1"/><path d="M55 106V51h120v55M88 76h54" stroke="#a5f3fc" stroke-width="12" stroke-linecap="round"/></g>
+  <text x="110" y="1030" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="37" font-weight="700">AI SAAS ACADEMY</text>
+</svg>

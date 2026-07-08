@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#22d3ee"/><stop offset=".45" stop-color="#0f172a"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+  <rect width="900" height="1200" fill="#050816"/><rect width="900" height="1200" fill="url(#g)" opacity=".9"/>
+  <rect x="74" y="72" width="752" height="1056" rx="48" fill="#020617" opacity=".45" stroke="#fff" stroke-opacity=".18"/>
+  <text x="110" y="150" fill="#a5f3fc" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="5">FREE GUIDE 09</text>
+  <text x="110" y="305" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">Build Useful</text>
+  <text x="110" y="395" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">AI Tools</text>
+  <text x="110" y="485" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">With APIs</text>
+  <text x="110" y="595" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">Understand how AI APIs can</text>
+  <text x="110" y="638" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">power tools and SaaS features.</text>
+  <g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity=".77"><rect x="160" y="745" width="200" height="150" rx="24"/><rect x="540" y="745" width="200" height="150" rx="24"/><path d="M360 820h180M425 770v100"/><circle cx="260" cy="820" r="28"/><circle cx="640" cy="820" r="28"/></g>
+  <text x="110" y="1030" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="37" font-weight="700">AI SAAS ACADEMY</text>
+</svg>
