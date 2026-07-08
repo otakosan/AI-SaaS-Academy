@@ -28,19 +28,33 @@ export function generateMetadata({ params }: PageProps) {
     };
   }
 
+  const title = `${book.title} | Free AI Business PDF eBook`;
+  const description = `${book.description} Read this free ${book.category} PDF eBook from AI SaaS Academy online or download it instantly.`;
+
   return {
-    title: `${book.title} | Free eBook`,
-    description: book.description,
+    title,
+    description,
+    keywords: [
+      `${book.title} PDF`,
+      `free ${book.category} ebook`,
+      "free AI business ebook",
+      "AI SaaS Academy free PDF",
+      "free no-code business guide",
+      "free AI SaaS guide"
+    ],
+    alternates: {
+      canonical: `/free-ebooks/${book.slug}`
+    },
     openGraph: {
-      title: `${book.title} | Free eBook`,
-      description: book.description,
+      title,
+      description,
       url: `${siteUrl}/free-ebooks/${book.slug}`,
       images: [absoluteUrl(book.cover)]
     },
     twitter: {
       card: "summary_large_image",
-      title: `${book.title} | Free eBook`,
-      description: book.description,
+      title,
+      description,
       images: [absoluteUrl(book.cover)]
     }
   };
@@ -51,8 +65,32 @@ export default function FreeEbookReaderPage({ params }: PageProps) {
 
   if (!book) notFound();
 
+  const bookSchema = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: book.title,
+    url: `${siteUrl}/free-ebooks/${book.slug}`,
+    description: book.description,
+    image: absoluteUrl(book.cover),
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    publisher: {
+      "@type": "Organization",
+      name: "AI SaaS Academy",
+      url: siteUrl
+    },
+    about: [book.category, "AI business", "No-code business", "Online business"],
+    workExample: {
+      "@type": "DigitalDocument",
+      name: `${book.title} PDF`,
+      url: absoluteUrl(book.file),
+      encodingFormat: "application/pdf"
+    }
+  };
+
   return (
     <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }} />
       <Link href="/free-ebooks" className="inline-flex items-center gap-2 text-sm font-semibold text-blue-200 hover:text-white">
         <ArrowLeft className="h-4 w-4" />
         Free eBooks
@@ -64,6 +102,12 @@ export default function FreeEbookReaderPage({ params }: PageProps) {
           <span className="rounded-md border border-cyan-200/20 bg-cyan-200/10 px-2.5 py-1 text-xs font-medium text-cyan-100">{book.category}</span>
           <h1 className="mt-5 text-3xl font-semibold leading-tight text-white">{book.title}</h1>
           <p className="mt-4 text-sm leading-6 text-white/62">{book.description}</p>
+          <div className="mt-5 rounded-md border border-white/10 bg-black/20 p-4">
+            <h2 className="text-base font-semibold text-white">Free {book.category} PDF eBook</h2>
+            <p className="mt-2 text-sm leading-6 text-white/60">
+              Read this AI SaaS Academy guide online to learn practical AI business, no-code, automation, and online income ideas, then download the PDF when you want to keep it.
+            </p>
+          </div>
           <div className="mt-6 grid gap-3">
             <a href={book.file} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-4 py-3 text-sm font-semibold text-ink transition hover:bg-blue-100">
               Open Full Screen
