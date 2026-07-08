@@ -108,7 +108,8 @@ export function AdminDashboard() {
       bannerSubtitle: settings.bannerSubtitle.trim(),
       social: {
         ...settings.social,
-        facebook: settings.social.facebook.trim()
+        facebook: settings.social.facebook.trim(),
+        instagram: settings.social.instagram.trim()
       }
     };
     saveSettings(cleanSettings);
@@ -243,6 +244,7 @@ export function AdminDashboard() {
           <input value={settings.bannerTitle} onChange={(e) => { setSettings({ ...settings, bannerTitle: e.target.value }); setSettingsStatus(""); }} placeholder="Homepage banner title" className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
           <input value={settings.bannerSubtitle} onChange={(e) => { setSettings({ ...settings, bannerSubtitle: e.target.value }); setSettingsStatus(""); }} placeholder="Homepage banner subtitle" className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
           <input value={settings.social.facebook} onChange={(e) => { setSettings({ ...settings, social: { ...settings.social, facebook: e.target.value } }); setSettingsStatus(""); }} placeholder="Facebook page URL" className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
+          <input value={settings.social.instagram} onChange={(e) => { setSettings({ ...settings, social: { ...settings.social, instagram: e.target.value } }); setSettingsStatus(""); }} placeholder="Instagram page URL" className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
         </div>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
           <button type="submit" className="rounded-md bg-white px-4 py-3 font-semibold text-ink">Save settings</button>

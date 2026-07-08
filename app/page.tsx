@@ -63,7 +63,10 @@ export default function HomePage() {
     name: "AI SaaS Academy",
     url: "https://aithv.com/",
     logo: "https://aithv.com/assets/ai-saas-academy-logo.jpeg",
-    sameAs: ["https://www.facebook.com/share/1JJTM9UzSF/"]
+    sameAs: [
+      "https://www.facebook.com/share/1JJTM9UzSF/",
+      "https://www.instagram.com/ai_saas_academy?igsh=NHFxeDg0c2RwOXo0"
+    ]
   };
 
   const itemListSchema = {

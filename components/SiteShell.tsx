@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Facebook, Linkedin, Menu, X, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Menu, X, Youtube } from "lucide-react";
 import { useEffect, useState } from "react";
 import { defaultSettings, SiteSettings } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
@@ -60,6 +60,7 @@ export function Footer() {
   const [settings, setSettings] = useState<SiteSettings>(defaultSettings);
   const socialLinks = [
     ["Facebook", settings.social.facebook, Facebook],
+    ["Instagram", settings.social.instagram, Instagram],
     ["LinkedIn", settings.social.linkedin, Linkedin],
     ["YouTube", settings.social.youtube, Youtube]
   ] as const;

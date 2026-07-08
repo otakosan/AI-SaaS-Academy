@@ -22,6 +22,7 @@ export type SiteSettings = {
   bannerSubtitle: string;
   social: {
     facebook: string;
+    instagram: string;
     x: string;
     linkedin: string;
     youtube: string;
@@ -132,6 +133,7 @@ export const defaultSettings: SiteSettings = {
   bannerSubtitle: "Practical eBooks for launching smarter offers, workflows, and SaaS ideas.",
   social: {
     facebook: "https://www.facebook.com/share/1JJTM9UzSF/",
+    instagram: "https://www.instagram.com/ai_saas_academy?igsh=NHFxeDg0c2RwOXo0",
     x: "https://x.com",
     linkedin: "https://linkedin.com",
     youtube: "https://youtube.com"
