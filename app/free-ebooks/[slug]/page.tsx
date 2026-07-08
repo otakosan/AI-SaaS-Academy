@@ -3,6 +3,12 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Download, ExternalLink } from "lucide-react";
 import { freeEbooks } from "@/lib/data";
 
+const siteUrl = "https://aithv.com";
+
+function absoluteUrl(path: string) {
+  return new URL(path, siteUrl).toString();
+}
+
 type PageProps = {
   params: {
     slug: string;
@@ -24,7 +30,19 @@ export function generateMetadata({ params }: PageProps) {
 
   return {
     title: `${book.title} | Free eBook`,
-    description: book.description
+    description: book.description,
+    openGraph: {
+      title: `${book.title} | Free eBook`,
+      description: book.description,
+      url: `${siteUrl}/free-ebooks/${book.slug}`,
+      images: [absoluteUrl(book.cover)]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${book.title} | Free eBook`,
+      description: book.description,
+      images: [absoluteUrl(book.cover)]
+    }
   };
 }
 
@@ -42,6 +60,7 @@ export default function FreeEbookReaderPage({ params }: PageProps) {
 
       <div className="mt-7 grid gap-6 lg:grid-cols-[0.85fr_1.65fr]">
         <aside className="rounded-lg border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
+          <img src={book.cover} alt={`${book.title} cover`} className="mb-6 aspect-[3/4] w-full rounded-lg border border-white/10 object-cover shadow-glow" />
           <span className="rounded-md border border-cyan-200/20 bg-cyan-200/10 px-2.5 py-1 text-xs font-medium text-cyan-100">{book.category}</span>
           <h1 className="mt-5 text-3xl font-semibold leading-tight text-white">{book.title}</h1>
           <p className="mt-4 text-sm leading-6 text-white/62">{book.description}</p>

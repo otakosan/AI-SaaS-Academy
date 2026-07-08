@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0ea5e9"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#111827"/></linearGradient></defs>
+  <rect width="900" height="1200" fill="#050816"/><rect width="900" height="1200" fill="url(#g)" opacity=".92"/>
+  <rect x="74" y="72" width="752" height="1056" rx="48" fill="#020617" opacity=".44" stroke="#fff" stroke-opacity=".18"/>
+  <text x="110" y="150" fill="#bae6fd" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="5">FREE GUIDE 07</text>
+  <text x="110" y="300" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">Micro SaaS</text>
+  <text x="110" y="390" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">Ideas For</text>
+  <text x="110" y="480" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">Boring</text>
+  <text x="110" y="570" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">Businesses</text>
+  <text x="110" y="675" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">Find overlooked software ideas</text>
+  <text x="110" y="718" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">inside everyday business problems.</text>
+  <g fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" opacity=".76"><path d="M160 870h580"/><path d="M205 870V735h115v135M392 870V690h115v180M580 870V760h115v110"/><path d="M205 735l57-55 58 55M392 690l58-55 57 55M580 760l58-55 57 55"/></g>
+  <text x="110" y="1030" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="37" font-weight="700">AI SAAS ACADEMY</text>
+</svg>

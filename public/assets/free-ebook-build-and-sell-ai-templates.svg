@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#8b5cf6"/><stop offset=".5" stop-color="#2563eb"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+  <rect width="900" height="1200" fill="#050816"/><rect width="900" height="1200" fill="url(#g)" opacity=".9"/>
+  <rect x="74" y="72" width="752" height="1056" rx="48" fill="#020617" opacity=".44" stroke="#fff" stroke-opacity=".18"/>
+  <text x="110" y="150" fill="#ddd6fe" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="5">FREE GUIDE 06</text>
+  <text x="110" y="305" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="74" font-weight="800">Build And Sell</text>
+  <text x="110" y="393" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="74" font-weight="800">AI Templates</text>
+  <text x="110" y="515" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">Create reusable AI assets and</text>
+  <text x="110" y="558" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">package them for a focused buyer.</text>
+  <g fill="#fff" opacity=".13"><rect x="135" y="700" width="170" height="160" rx="26"/><rect x="365" y="700" width="170" height="160" rx="26"/><rect x="595" y="700" width="170" height="160" rx="26"/></g>
+  <g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".72"><path d="M175 755h88M175 805h62M405 755h88M405 805h62M635 755h88M635 805h62"/></g>
+  <text x="110" y="1030" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="37" font-weight="700">AI SAAS ACADEMY</text>
+</svg>

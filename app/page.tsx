@@ -131,9 +131,12 @@ export default function HomePage() {
               </div>
               <div className="grid gap-2 p-3 sm:grid-cols-2">
                 {freeEbooks.slice(0, 4).map((book) => (
-                  <Link key={book.id} href={`/free-ebooks/${book.slug}`} className="rounded-md border border-white/10 bg-white/[0.04] p-3 transition hover:border-cyan-200/30 hover:bg-white/[0.08]">
-                    <p className="text-[11px] font-medium text-cyan-100">{book.category}</p>
-                    <h3 className="mt-1 text-sm font-semibold leading-5 text-white">{book.title}</h3>
+                  <Link key={book.id} href={`/free-ebooks/${book.slug}`} className="flex gap-3 rounded-md border border-white/10 bg-white/[0.04] p-3 transition hover:border-cyan-200/30 hover:bg-white/[0.08]">
+                    <img src={book.cover} alt={`${book.title} cover`} className="h-20 w-14 shrink-0 rounded border border-white/10 object-cover" />
+                    <span>
+                      <span className="block text-[11px] font-medium text-cyan-100">{book.category}</span>
+                      <span className="mt-1 block text-sm font-semibold leading-5 text-white">{book.title}</span>
+                    </span>
                   </Link>
                 ))}
               </div>

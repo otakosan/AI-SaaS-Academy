@@ -35,6 +35,7 @@ export type FreeEbook = {
   slug: string;
   description: string;
   category: string;
+  cover: string;
   file: string;
   pages: string;
 };
@@ -147,6 +148,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "build-your-first-ai-micro-saas",
     description: "A beginner-friendly roadmap for turning one useful AI idea into a focused micro SaaS offer.",
     category: "SaaS",
+    cover: assetPath("/assets/free-ebook-build-your-first-ai-micro-saas.svg"),
     file: assetPath("/free-ebooks/01-build-your-first-ai-micro-saas.pdf"),
     pages: "Free PDF"
   },
@@ -156,6 +158,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "digital-products-that-sell-while-you-sleep",
     description: "Learn how to package knowledge into simple digital products with clear offers and automated delivery.",
     category: "Online Business",
+    cover: assetPath("/assets/free-ebook-digital-products-that-sell.svg"),
     file: assetPath("/free-ebooks/02-digital-products-that-sell-while-you-sleep.pdf"),
     pages: "Free PDF"
   },
@@ -165,6 +168,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "prompt-engineering-for-profit",
     description: "Practical prompt systems for creating content, offers, workflows, and client-ready AI outputs.",
     category: "Artificial Intelligence",
+    cover: assetPath("/assets/free-ebook-prompt-engineering-for-profit.svg"),
     file: assetPath("/free-ebooks/03-prompt-engineering-for-profit.pdf"),
     pages: "Free PDF"
   },
@@ -174,6 +178,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "ai-automation-agency-starter-kit",
     description: "A starter guide for building automation services that help businesses save time and operate faster.",
     category: "Automation",
+    cover: assetPath("/assets/free-ebook-ai-automation-agency.svg"),
     file: assetPath("/free-ebooks/04-ai-automation-agency-starter-kit.pdf"),
     pages: "Free PDF"
   },
@@ -183,6 +188,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "from-code-to-cashflow",
     description: "A practical path from building useful tools to turning them into paid products or services.",
     category: "Online Business",
+    cover: assetPath("/assets/free-ebook-code-to-cashflow.svg"),
     file: assetPath("/free-ebooks/05-from-code-to-cashflow.pdf"),
     pages: "Free PDF"
   },
@@ -192,6 +198,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "build-and-sell-ai-templates",
     description: "Create reusable AI templates, package them clearly, and sell them to a focused audience.",
     category: "Artificial Intelligence",
+    cover: assetPath("/assets/free-ebook-build-and-sell-ai-templates.svg"),
     file: assetPath("/free-ebooks/06-build-and-sell-ai-templates.pdf"),
     pages: "Free PDF"
   },
@@ -201,6 +208,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "micro-saas-ideas-for-boring-businesses",
     description: "Find simple software opportunities inside everyday business problems and overlooked niches.",
     category: "SaaS",
+    cover: assetPath("/assets/free-ebook-micro-saas-ideas.svg"),
     file: assetPath("/free-ebooks/07-micro-saas-ideas-for-boring-businesses.pdf"),
     pages: "Free PDF"
   },
@@ -210,6 +218,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "ai-freelancer-product-ladder",
     description: "Design low-ticket, mid-ticket, and premium AI services that can grow into digital products.",
     category: "Online Business",
+    cover: assetPath("/assets/free-ebook-ai-freelancer-product-ladder.svg"),
     file: assetPath("/free-ebooks/08-ai-freelancer-product-ladder.pdf"),
     pages: "Free PDF"
   },
@@ -219,6 +228,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "build-useful-ai-tools-with-apis",
     description: "Understand how AI APIs can power helpful tools, workflows, and SaaS features.",
     category: "Artificial Intelligence",
+    cover: assetPath("/assets/free-ebook-ai-tools-with-apis.svg"),
     file: assetPath("/free-ebooks/09-build-useful-ai-tools-with-apis.pdf"),
     pages: "Free PDF"
   },
@@ -228,6 +238,7 @@ export const freeEbooks: FreeEbook[] = [
     slug: "zero-audience-to-first-digital-product-sale",
     description: "A focused playbook for choosing an offer, finding buyers, and getting your first sale.",
     category: "Online Business",
+    cover: assetPath("/assets/free-ebook-first-digital-product-sale.svg"),
     file: assetPath("/free-ebooks/10-zero-audience-to-first-digital-product-sale.pdf"),
     pages: "Free PDF"
   }

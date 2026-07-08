@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#14b8a6"/><stop offset=".5" stop-color="#2563eb"/><stop offset="1" stop-color="#7e22ce"/></linearGradient></defs>
+  <rect width="900" height="1200" fill="#050816"/><rect width="900" height="1200" fill="url(#g)" opacity=".9"/>
+  <circle cx="450" cy="760" r="270" fill="none" stroke="#fff" stroke-width="7" stroke-opacity=".12"/><circle cx="450" cy="760" r="150" fill="none" stroke="#fff" stroke-width="7" stroke-opacity=".18"/>
+  <rect x="74" y="72" width="752" height="1056" rx="48" fill="#020617" opacity=".45" stroke="#fff" stroke-opacity=".18"/>
+  <text x="110" y="150" fill="#ccfbf1" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="5">FREE GUIDE 04</text>
+  <text x="110" y="305" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">AI Automation</text>
+  <text x="110" y="395" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">Agency</text>
+  <text x="110" y="485" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="800">Starter Kit</text>
+  <text x="110" y="595" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">Build services that save time</text>
+  <text x="110" y="638" fill="#dbeafe" font-family="Inter,Arial,sans-serif" font-size="31">and help businesses operate faster.</text>
+  <g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" opacity=".78"><path d="M180 815h140l70-70h140l80 80h110"/><circle cx="180" cy="815" r="28"/><circle cx="530" cy="745" r="28"/><circle cx="720" cy="825" r="28"/></g>
+  <text x="110" y="1030" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="37" font-weight="700">AI SAAS ACADEMY</text>
+</svg>
