@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, BookOpen, BrainCircuit, Workflow } from "lucide-react";
+import { ArrowRight, BadgeCheck, BookOpen, BrainCircuit, Newspaper, Workflow } from "lucide-react";
 import { BookCatalog } from "@/components/BookCatalog";
 import { HomeSettingsBanner } from "@/components/HomeSettingsBanner";
 import { freeEbooks, sampleEbooks } from "@/lib/data";
@@ -65,7 +65,8 @@ export default function HomePage() {
     logo: "https://aithv.com/assets/ai-saas-academy-logo.jpeg",
     sameAs: [
       "https://www.facebook.com/share/1JJTM9UzSF/",
-      "https://www.instagram.com/ai_saas_academy?igsh=NHFxeDg0c2RwOXo0"
+      "https://www.instagram.com/ai_saas_academy?igsh=NHFxeDg0c2RwOXo0",
+      "https://www.waveai360.com"
     ]
   };
 
@@ -115,6 +116,15 @@ export default function HomePage() {
                 Browse eBooks
                 <ArrowRight className="h-4 w-4" />
               </Link>
+              <a
+                href="https://www.waveai360.com"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/10 bg-white/[0.08] px-5 py-3 font-semibold text-white transition hover:border-cyan-200/30 hover:bg-white/[0.14]"
+              >
+                Read Blog
+                <Newspaper className="h-4 w-4" />
+              </a>
             </div>
             <div className="mt-6 max-w-2xl overflow-hidden rounded-lg border border-cyan-200/15 bg-cyan-200/[0.05] backdrop-blur">
               <div className="border-b border-white/10 p-4">

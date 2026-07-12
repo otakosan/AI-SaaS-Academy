@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Facebook, Instagram, Linkedin, Menu, X, Youtube } from "lucide-react";
+import { ExternalLink, Facebook, Instagram, Linkedin, Menu, X, Youtube } from "lucide-react";
 import { useEffect, useState } from "react";
 import { defaultSettings, SiteSettings } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
@@ -15,6 +15,8 @@ const nav = [
   ["About", "/about"],
   ["Contact", "/contact"]
 ];
+
+const blogUrl = "https://www.waveai360.com";
 
 export function Header() {
   const pathname = usePathname();
@@ -38,6 +40,15 @@ export function Header() {
               {label}
             </Link>
           ))}
+          <a
+            href={blogUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border border-cyan-200/20 bg-cyan-200/10 px-3 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/35 hover:bg-cyan-200/15 hover:text-white"
+          >
+            Blog
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
         </nav>
         <button className="rounded-md border border-white/10 p-2 text-white md:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -50,6 +61,16 @@ export function Header() {
               {label}
             </Link>
           ))}
+          <a
+            href={blogUrl}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2 rounded-md px-3 py-3 text-sm font-semibold text-cyan-100 hover:bg-white/10 hover:text-white"
+          >
+            Blog
+            <ExternalLink className="h-4 w-4" />
+          </a>
         </nav>
       )}
     </header>
@@ -83,6 +104,15 @@ export function Footer() {
             <span className="font-semibold text-white">AI SaaS Academy</span>
           </div>
           <p className="max-w-sm text-sm leading-6 text-white/60">Digital eBooks for builders learning AI, SaaS, no-code, automation, and online business systems.</p>
+          <a
+            href={blogUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex items-center gap-2 rounded-md border border-cyan-200/20 bg-cyan-200/10 px-3 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/35 hover:bg-cyan-200/15 hover:text-white"
+          >
+            Visit Blog
+            <ExternalLink className="h-4 w-4" />
+          </a>
         </div>
         <div className="text-sm text-white/60">
           <p className="mb-3 font-medium text-white">Contact</p>
