@@ -5,6 +5,7 @@ import { BookCatalog } from "@/components/BookCatalog";
 import { HomeSettingsBanner } from "@/components/HomeSettingsBanner";
 import { freeEbooks, sampleEbooks } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
+import { seoGuides } from "@/lib/seoGuides";
 
 export const metadata = {
   title: "AI SaaS Academy | Build AI SaaS Businesses Without Coding",
@@ -189,6 +190,28 @@ export default function HomePage() {
               <h3 className="mt-5 text-lg font-semibold text-white">{String(title)}</h3>
               <p className="mt-2 text-sm leading-6 text-white/60">{String(copy)}</p>
             </div>
+          ))}
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mb-8 max-w-3xl">
+          <p className="text-sm font-medium text-cyan-200">Popular AI business topics</p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Guides built for high-intent AI searches</h2>
+          <p className="mt-3 text-sm leading-6 text-white/60">
+            Learn the practical paths people search for most: AI SaaS, no-code tools, prompt engineering, automation agencies, and ways to make money with AI.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {seoGuides.map((guide) => (
+            <Link key={guide.slug} href={`/guides/${guide.slug}`} className="rounded-lg border border-white/10 bg-white/[0.04] p-5 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-200/35 hover:bg-white/[0.07]">
+              <span className="text-xs font-medium text-cyan-200">{guide.eyebrow}</span>
+              <h3 className="mt-3 text-xl font-semibold leading-7 text-white">{guide.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-white/62">{guide.description}</p>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-200">
+                Read guide
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
           ))}
         </div>
       </section>

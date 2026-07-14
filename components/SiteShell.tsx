@@ -6,12 +6,14 @@ import { ExternalLink, Facebook, Instagram, Linkedin, Menu, X, Youtube } from "l
 import { useEffect, useState } from "react";
 import { defaultSettings, SiteSettings } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
+import { seoGuides } from "@/lib/seoGuides";
 import { loadSettings } from "@/lib/store";
 
 const nav = [
   ["Home", "/"],
   ["eBooks", "/ebooks"],
   ["Free eBooks", "/free-ebooks"],
+  ["Guides", "/guides"],
   ["About", "/about"],
   ["Contact", "/contact"]
 ];
@@ -95,7 +97,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-black/20">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-8">
         <div>
           <div className="mb-4 flex items-center gap-3">
             <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-blue-300/25 bg-black shadow-glow">
@@ -118,6 +120,16 @@ export function Footer() {
           <p className="mb-3 font-medium text-white">Contact</p>
           <p>Email: {settings.email}</p>
           <p>WhatsApp: +{settings.whatsappNumber}</p>
+        </div>
+        <div className="text-sm text-white/60">
+          <p className="mb-3 font-medium text-white">Guides</p>
+          <div className="grid gap-2">
+            {seoGuides.slice(0, 5).map((guide) => (
+              <Link key={guide.slug} href={`/guides/${guide.slug}`} className="hover:text-white">
+                {guide.primaryKeyword}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="text-sm text-white/60">
           <p className="mb-3 font-medium text-white">Social</p>
