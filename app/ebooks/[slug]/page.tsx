@@ -93,7 +93,40 @@ export default function EbookDetailPage({ params }: PageProps) {
       priceCurrency: "USD",
       price: book.price,
       availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition"
+      itemCondition: "https://schema.org/NewCondition",
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "MA"
+        },
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: 0,
+          currency: "USD"
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 1,
+            unitCode: "DAY"
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 0,
+            unitCode: "DAY"
+          }
+        }
+      },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "MA",
+        returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+        returnFees: "https://schema.org/FreeReturn"
+      }
     }
   };
 
