@@ -1,4 +1,4 @@
-2:I[9498,["498","static/chunks/498-46065bf749bfa913.js","62","static/chunks/app/free-ebooks/%5Bslug%5D/page-b0f9e2071ce32695.js"],""]
+2:I[9498,["498","static/chunks/498-46065bf749bfa913.js","62","static/chunks/app/free-ebooks/%5Bslug%5D/page-0848d083df9b0181.js"],""]
 3:I[176,[],""]
 5:I[9414,[],""]
 6:I[2225,["498","static/chunks/498-46065bf749bfa913.js","546","static/chunks/546-5f0a98d4da916e64.js","185","static/chunks/app/layout-9e46787739450d12.js"],""]
