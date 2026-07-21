@@ -65,7 +65,7 @@ export const seoGuides: SeoGuide[] = [
           "The easiest path is often an AI service for a specific audience, such as AI content creation, automation setup, lead research, or chatbot workflows."
       }
     ],
-    recommendedBookSlugs: ["ways-to-make-money-with-ai-500-pages", "100-powerful-ai-prompts-that-save-you-hours-of-work"],
+    recommendedBookSlugs: ["over-500-sellable-digital-business-ideas", "100-professional-prompts-for-chatgpt-claude-and-grok"],
     recommendedFreeSlugs: ["zero-audience-to-first-digital-product-sale", "ai-freelancer-product-ladder"]
   },
   {
@@ -113,7 +113,7 @@ export const seoGuides: SeoGuide[] = [
           "A good first idea solves one repeated business problem, such as customer replies, lead research, content creation, document summaries, or reporting."
       }
     ],
-    recommendedBookSlugs: ["how-to-build-an-ai-saas-business-without-coding", "ways-to-make-money-with-ai-500-pages"],
+    recommendedBookSlugs: ["build-an-ai-saas-without-code", "over-500-sellable-digital-business-ideas"],
     recommendedFreeSlugs: ["build-your-first-ai-micro-saas", "micro-saas-ideas-for-boring-businesses"]
   },
   {
@@ -161,7 +161,7 @@ export const seoGuides: SeoGuide[] = [
           "No. You can begin with visual automation tools, AI assistants, databases, forms, and templates, then add custom code later if the idea proves demand."
       }
     ],
-    recommendedBookSlugs: ["how-to-build-an-ai-saas-business-without-coding", "100-powerful-ai-prompts-that-save-you-hours-of-work"],
+    recommendedBookSlugs: ["build-an-ai-saas-without-code", "100-professional-prompts-for-chatgpt-claude-and-grok"],
     recommendedFreeSlugs: ["build-useful-ai-tools-with-apis", "build-and-sell-ai-templates"]
   },
   {
@@ -209,7 +209,7 @@ export const seoGuides: SeoGuide[] = [
           "Start with simple workflows such as lead follow-up, customer replies, reporting, content repurposing, appointment reminders, or chatbot setup."
       }
     ],
-    recommendedBookSlugs: ["ways-to-make-money-with-ai-500-pages"],
+    recommendedBookSlugs: ["over-500-sellable-digital-business-ideas"],
     recommendedFreeSlugs: ["ai-automation-agency-starter-kit", "ai-freelancer-product-ladder"]
   },
   {
@@ -257,7 +257,7 @@ export const seoGuides: SeoGuide[] = [
           "A valuable prompt pack saves time, produces consistent outputs, targets one audience, and helps the buyer complete a real business task."
       }
     ],
-    recommendedBookSlugs: ["100-powerful-ai-prompts-that-save-you-hours-of-work", "ways-to-make-money-with-ai-500-pages"],
+    recommendedBookSlugs: ["100-professional-prompts-for-chatgpt-claude-and-grok", "over-500-sellable-digital-business-ideas"],
     recommendedFreeSlugs: ["prompt-engineering-for-profit", "build-and-sell-ai-templates"]
   }
 ];

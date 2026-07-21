@@ -13,6 +13,7 @@ export type Ebook = {
   features: string[];
   featured: boolean;
   createdAt: string;
+  amazonUrl?: string;
 };
 
 export type SiteSettings = {
@@ -53,77 +54,109 @@ export const coverStyles = [
 
 export const sampleEbooks: Ebook[] = [
   {
-    id: "ways-to-make-money-with-ai-500-pages",
-    title: "Ways to Make Money With AI",
-    slug: "ways-to-make-money-with-ai-500-pages",
-    description: "A massive 500-page AI income playbook with 25 practical business models, offers, and execution plans.",
+    id: "the-ai-content-creation-guide",
+    title: "The AI Content Creation Guide: Facebook, TikTok, YouTube",
+    slug: "the-ai-content-creation-guide",
+    description: "A practical Kindle guide for creators who want to plan, prompt, repurpose, and publish AI-assisted content across major social platforms.",
     longDescription:
-      "Ways to Make Money With AI is a complete 500-page guide for turning AI skills, tools, and workflows into real online business opportunities. It is built for beginners, freelancers, creators, consultants, and entrepreneurs who want clear ways to make money with AI instead of random ideas.\n\nInside you will learn AI money foundations, prompt engineering services, AI content studios, short-form video with AI, copywriting offers, automation agencies, chatbots, lead lists, digital products, AI courses, newsletters, affiliate sites, niche data products, AI design products, voice and podcasting offers, local business services, real estate use cases, coach and consultant offers, micro-SaaS ideas, APIs, agents, productized services, pricing, sales, proof, risk management, and a 90-day execution plan.\n\nThis eBook is 500 pages and is available for $15. Payment method: Binance Pay. Once payment is confirmed, the eBook will be sent immediately.",
-    price: 15,
+      "The AI Content Creation Guide is built for creators, freelancers, small business owners, and beginners who want a repeatable content workflow for Facebook, TikTok, and YouTube.\n\nThis Kindle eBook shows how to turn one idea into platform-ready content, use AI prompts without sounding generic, plan faster, repurpose smarter, and publish with more confidence.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 2.99,
+    category: "Artificial Intelligence",
+    cover: "https://m.media-amazon.com/images/I/61LYul5zdcL._AC_UY654_QL65_.jpg",
+    gallery: [],
+    features: [
+      "AI content workflow for Facebook, TikTok, and YouTube",
+      "Prompt-based planning and repurposing system",
+      "Built for creators, freelancers, and small businesses",
+      "Official Amazon Kindle checkout"
+    ],
+    featured: true,
+    createdAt: "2026-07-20T10:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9P8DNZZ"
+  },
+  {
+    id: "over-500-sellable-digital-business-ideas",
+    title: "Over 500 Sellable Digital Business Ideas",
+    slug: "over-500-sellable-digital-business-ideas",
+    description: "A broad Kindle idea library for entrepreneurs who want digital product, online business, and AI-powered opportunity ideas they can start testing.",
+    longDescription:
+      "Over 500 Sellable Digital Business Ideas is a Kindle guide for entrepreneurs who want a large collection of online business opportunities, digital product concepts, and practical launch angles.\n\nThe book is designed to help beginners and builders explore sellable ideas, think through revenue models, and find opportunities that can be tested with AI tools, content, automation, and simple digital products.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 0,
     category: "Online Business",
-    cover: assetPath("/assets/ways-to-make-money-with-ai-cover.svg"),
-    gallery: [assetPath("/assets/ways-to-make-money-with-ai-table-of-contents.svg")],
+    cover: "https://m.media-amazon.com/images/I/71JPS4dtkTL._AC_UY654_QL65_.jpg",
+    gallery: [],
     features: [
-      "500-page AI money-making playbook",
-      "25 practical AI business models",
-      "Includes AI services, products, agencies, and micro-SaaS",
-      "Pricing, sales, proof, and risk guidance",
-      "90-day execution plan",
-      "Payment method: Binance Pay"
+      "Large digital business idea library",
+      "Online business and product inspiration",
+      "Useful for beginners, creators, and entrepreneurs",
+      "Official Amazon Kindle checkout"
     ],
     featured: true,
-    createdAt: "2026-07-06T16:00:00.000Z"
+    createdAt: "2026-07-18T10:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9B9VG49"
   },
   {
-    id: "70ec67c5-0cef-4e50-9c89-fcc4d95c9ed1",
-    title: "100 Powerful AI Prompts That Save You Hours of Work",
-    slug: "100-powerful-ai-prompts-that-save-you-hours-of-work",
-    description: "Unlock the full power of AI with 100 carefully crafted prompts for ChatGPT, Claude, and Grok.",
+    id: "the-ai-blueprint-build-your-own-artificial-intelligence-from-scratch",
+    title: "The AI Blueprint: Build Your Own Artificial Intelligence from Scratch",
+    slug: "the-ai-blueprint-build-your-own-artificial-intelligence-from-scratch",
+    description: "A beginner-focused Kindle guide for understanding how AI systems are planned, structured, and built from the ground up.",
     longDescription:
-      "Whether you're an entrepreneur, freelancer, marketer, student, or content creator, these ready-to-use prompts will help you work faster, create better content, solve problems, and boost productivity.\n\nInside you'll discover prompts for:\n- Business and startups\n- Marketing and sales\n- Copywriting\n- Content creation\n- Programming\n- Website building\n- SaaS development\n- Productivity\n- Learning\n- And much more\n\nNo prompt engineering experience required. Just copy, paste, and get amazing results.",
-    price: 3,
+      "The AI Blueprint is made for readers who want to understand artificial intelligence from a practical builder's point of view. It introduces the thinking behind AI projects, workflows, data, model behavior, and how AI products can be planned.\n\nThis Kindle eBook is a strong starting point for beginners who want to move from curiosity to building useful AI-powered products, tools, or business systems.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 0,
     category: "Artificial Intelligence",
-    cover: assetPath("/assets/ebook-100-powerful-ai-prompts-that-save-you-hours-of-work-cover.png"),
+    cover: "https://m.media-amazon.com/images/I/710SIk4Ez8L._AC_UY654_QL65_.jpg",
     gallery: [],
-    features: ["100 ready-to-use AI prompts", "Business and marketing prompts", "SaaS and website prompts", "No prompt experience required"],
+    features: [
+      "Beginner-friendly AI foundations",
+      "Builder-focused artificial intelligence concepts",
+      "Useful for future AI product creators",
+      "Official Amazon Kindle checkout"
+    ],
     featured: true,
-    createdAt: "2026-07-04T14:41:43.214Z"
+    createdAt: "2026-07-20T10:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9NTMPJP"
   },
   {
-    id: "e3665c52-44e2-42ad-9833-81de0125ca29",
-    title: "AI CONTENT CREATION GUIDE",
-    slug: "ai-content-creation-guide",
-    description: "Create viral content with AI faster than ever for Facebook, TikTok, and YouTube.",
+    id: "100-professional-prompts-for-chatgpt-claude-and-grok",
+    title: "100 Professional Prompts for ChatGPT, Claude & Grok",
+    slug: "100-professional-prompts-for-chatgpt-claude-and-grok",
+    description: "A practical Kindle prompt library for developers and builders who want stronger outputs from ChatGPT, Claude, and Grok.",
     longDescription:
-      "Struggling to come up with content ideas?\n\nDiscover the ultimate guide to creating high-quality content for Facebook, TikTok, and YouTube using the power of Artificial Intelligence.\n\nInside this eBook you'll learn:\n- Generate unlimited content ideas in minutes\n- Write viral posts with AI\n- Create engaging TikTok and YouTube scripts\n- Save hours every week\n- Use the best AI tools for content creation\n- Grow your audience faster\n\nPerfect for content creators, small business owners, freelancers, digital marketers, and beginners.\n\nOnly $5.\n\nPayment Method: Binance Pay.\n\nSave time, create better content, and grow your audience with AI. Message now to get your copy instantly!",
-    price: 5,
+      "100 Professional Prompts for ChatGPT, Claude & Grok is a Kindle prompt library created for developers, builders, freelancers, and AI users who want more useful responses from modern AI assistants.\n\nUse it to improve planning, development workflows, business writing, product thinking, research, and day-to-day AI-assisted execution.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 4.99,
     category: "Artificial Intelligence",
-    cover: assetPath("/assets/ebook-ai-acontent-creation-guide-cover.png"),
+    cover: "https://m.media-amazon.com/images/I/61I6LvaGa+L._AC_UY654_QL65_.jpg",
     gallery: [],
-    features: ["Unlimited content ideas", "Viral post prompts", "TikTok and YouTube scripts", "Best AI tools for creators"],
+    features: [
+      "100 professional AI prompts",
+      "Works with ChatGPT, Claude, and Grok",
+      "Useful for developers, builders, and business tasks",
+      "Official Amazon Kindle checkout"
+    ],
     featured: true,
-    createdAt: "2026-07-04T14:38:50.445Z"
+    createdAt: "2026-07-20T10:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9P32BCM"
   },
   {
-    id: "how-to-build-an-ai-saas-business-without-coding",
-    title: "How to Build an AI SaaS Business Without Coding",
-    slug: "how-to-build-an-ai-saas-business-without-coding",
-    description: "Launch your own AI SaaS business using AI and no-code tools, even with zero coding experience.",
+    id: "build-an-ai-saas-without-code",
+    title: "Build an AI SaaS Without Code",
+    slug: "build-an-ai-saas-without-code",
+    description: "A no-code founder's Kindle guide to building an AI-powered subscription business without traditional programming.",
     longDescription:
-      "The eBook How to Build an AI SaaS Business Without Coding is available now for only $10. Inside you'll learn how to validate your SaaS idea, choose the best AI and no-code tools, build your product step by step, launch, and start getting customers. Payment method: Binance Pay. Once your payment is confirmed, the eBook will be sent to you immediately.",
-    price: 10,
+      "Build an AI SaaS Without Code is for founders, entrepreneurs, and beginners who want to create a subscription business using AI and no-code tools.\n\nThe book focuses on the path from idea to offer: choosing a SaaS problem, planning the workflow, validating demand, using no-code systems, and thinking like a subscription product builder.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 4.99,
     category: "SaaS",
-    cover: assetPath("/assets/ai-saas-no-coding-ebook.png"),
-    gallery: [assetPath("/assets/ai-saas-no-coding-ebook.png")],
+    cover: "https://m.media-amazon.com/images/I/6100cWKwoVL._AC_UY654_QL65_.jpg",
+    gallery: [],
     features: [
-      "How to validate your SaaS idea",
-      "The best AI and no-code tools",
-      "How to build your product step by step",
-      "How to launch and start getting customers",
-      "Payment method: Binance Pay"
+      "No-code AI SaaS business approach",
+      "Subscription business planning",
+      "Idea validation and launch thinking",
+      "Official Amazon Kindle checkout"
     ],
     featured: true,
-    createdAt: "2026-07-03T18:45:00.000Z"
+    createdAt: "2026-07-20T10:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9NTVSNY"
   }
 ];
 

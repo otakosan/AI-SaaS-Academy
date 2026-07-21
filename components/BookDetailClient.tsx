@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Check, MessageCircle } from "lucide-react";
+import { ArrowLeft, Check, ExternalLink, MessageCircle } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Ebook, formatPrice } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
@@ -50,10 +50,17 @@ export function BookDetailClient({ slug }: { slug: string }) {
               <span className="text-sm text-white/55">Instant digital order</span>
               <span className="text-3xl font-semibold text-white">{formatPrice(book.price)}</span>
             </div>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-3 font-semibold text-white shadow-glow transition hover:scale-[1.01]">
-              <MessageCircle className="h-5 w-5" />
-              Instant WhatsApp Order
-            </a>
+            {book.amazonUrl ? (
+              <a href={book.amazonUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-3 font-semibold text-white shadow-glow transition hover:scale-[1.01]">
+                <ExternalLink className="h-5 w-5" />
+                Buy on Amazon
+              </a>
+            ) : (
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-3 font-semibold text-white shadow-glow transition hover:scale-[1.01]">
+                <MessageCircle className="h-5 w-5" />
+                Instant WhatsApp Order
+              </a>
+            )}
           </div>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {book.features.map((feature) => (

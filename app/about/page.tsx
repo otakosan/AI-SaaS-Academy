@@ -15,7 +15,7 @@ export default function AboutPage() {
         {[
           [Target, "Practical focus", "Every guide is built around action, templates, and decisions that move a business forward."],
           [Zap, "Modern systems", "Learn how AI and automation fit into real offers, workflows, and digital products."],
-          [BadgeCheck, "Premium experience", "Clean catalog browsing, quick details, and instant WhatsApp ordering."]
+          [BadgeCheck, "Premium experience", "Clean catalog browsing, quick details, and direct Amazon Kindle checkout."]
         ].map(([Icon, title, copy]) => (
           <div key={String(title)} className="rounded-lg border border-white/10 bg-white/[0.05] p-6 backdrop-blur">
             <Icon className="h-6 w-6 text-cyan-200" />

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpDown, Search, SlidersHorizontal } from "lucide-react";
+import { ArrowUpDown, ExternalLink, Search, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { categories, Ebook, formatPrice, sampleEbooks } from "@/lib/data";
 import { loadBooks } from "@/lib/store";
@@ -75,8 +75,14 @@ export function BookCatalog({ featuredOnly = false }: { featuredOnly?: boolean }
               <h3 className="text-lg font-semibold text-white">{book.title}</h3>
               <p className="mt-2 min-h-12 text-sm leading-6 text-white/58">{book.description}</p>
               <Link href={`/ebooks/${book.slug}`} className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-blue-100">
-                View Details
+                Read Details
               </Link>
+              {book.amazonUrl && (
+                <a href={book.amazonUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md border border-cyan-200/20 bg-cyan-200/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/35 hover:bg-cyan-200/15 hover:text-white">
+                  Buy on Amazon
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              )}
             </div>
           </article>
         ))}

@@ -17,7 +17,8 @@ const emptyBook: Ebook = {
   gallery: [],
   features: ["Practical templates", "Step-by-step guidance", "Business-ready checklists"],
   featured: false,
-  createdAt: ""
+  createdAt: "",
+  amazonUrl: ""
 };
 
 const ADMIN_USER = "HAKIM";
@@ -185,6 +186,7 @@ export function AdminDashboard() {
             <input required value={editing.title} onChange={(e) => setEditing({ ...editing, title: e.target.value })} placeholder="Title" className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
             <textarea required value={editing.description} onChange={(e) => setEditing({ ...editing, description: e.target.value })} placeholder="Short description" className="min-h-20 rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
             <textarea required value={editing.longDescription} onChange={(e) => setEditing({ ...editing, longDescription: e.target.value })} placeholder="Long description" className="min-h-28 rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
+            <input value={editing.amazonUrl || ""} onChange={(e) => setEditing({ ...editing, amazonUrl: e.target.value })} placeholder="Amazon Kindle buy URL" className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
             <div className="grid gap-3 sm:grid-cols-2">
               <input required type="number" value={editing.price} onChange={(e) => setEditing({ ...editing, price: Number(e.target.value) })} placeholder="Price" className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none" />
               <select value={editing.category} onChange={(e) => setEditing({ ...editing, category: e.target.value })} className="rounded-md border border-white/10 bg-black/25 px-3 py-2 text-white outline-none">

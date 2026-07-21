@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Check, MessageCircle } from "lucide-react";
+import { ArrowLeft, Check, ExternalLink, MessageCircle } from "lucide-react";
 import { BookCover } from "@/components/BookCover";
 import { defaultSettings, formatPrice, sampleEbooks } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
@@ -13,24 +13,17 @@ type PageProps = {
 };
 
 const siteUrl = "https://aithv.com";
-const slugAliases: Record<string, string> = {
-  "ai-acontent-creation-guide": "ai-content-creation-guide"
-};
 
 function absoluteUrl(path: string) {
   return new URL(path, siteUrl).toString();
 }
 
 function resolveBook(slug: string) {
-  const resolvedSlug = slugAliases[slug] || slug;
-  return sampleEbooks.find((item) => item.slug === resolvedSlug);
+  return sampleEbooks.find((item) => item.slug === slug);
 }
 
 export function generateStaticParams() {
-  return [
-    ...sampleEbooks.map((book) => ({ slug: book.slug })),
-    ...Object.keys(slugAliases).map((slug) => ({ slug }))
-  ];
+  return sampleEbooks.map((book) => ({ slug: book.slug }));
 }
 
 export function generateMetadata({ params }: PageProps): Metadata {
@@ -43,7 +36,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   }
 
   const title = `${book.title} - ${formatPrice(book.price)} AI Business eBook`;
-  const description = `${book.description} Buy the ${book.title} digital eBook from AI SaaS Academy and order instantly through WhatsApp.`;
+  const description = `${book.description} Read details on AI SaaS Academy and buy the Kindle eBook on Amazon.`;
 
   return {
     title,
@@ -72,6 +65,7 @@ export default function EbookDetailPage({ params }: PageProps) {
 
   if (!book) notFound();
 
+  const amazonUrl = book.amazonUrl || "";
   const message = encodeURIComponent(
     `Hello! I'm interested in purchasing:\n${book.title}\nPrice: $${book.price}\n\nPayment Method: Binance Pay\n\nI'm ready to BUY. Please send me the Binance Pay payment details.`
   );
@@ -89,7 +83,7 @@ export default function EbookDetailPage({ params }: PageProps) {
     category: book.category,
     offers: {
       "@type": "Offer",
-      url: `${siteUrl}/ebooks/${book.slug}`,
+      url: amazonUrl || `${siteUrl}/ebooks/${book.slug}`,
       priceCurrency: "USD",
       price: book.price,
       availability: "https://schema.org/InStock",
@@ -152,10 +146,18 @@ export default function EbookDetailPage({ params }: PageProps) {
               <span className="text-sm text-white/55">Instant digital eBook order</span>
               <span className="text-3xl font-semibold text-white">{formatPrice(book.price)}</span>
             </div>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-3 font-semibold text-white shadow-glow transition hover:scale-[1.01]">
-              <MessageCircle className="h-5 w-5" />
-              Instant WhatsApp Order
-            </a>
+            {amazonUrl ? (
+              <a href={amazonUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-3 font-semibold text-white shadow-glow transition hover:scale-[1.01]">
+                <ExternalLink className="h-5 w-5" />
+                Buy on Amazon
+              </a>
+            ) : (
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-3 font-semibold text-white shadow-glow transition hover:scale-[1.01]">
+                <MessageCircle className="h-5 w-5" />
+                Instant WhatsApp Order
+              </a>
+            )}
+            {amazonUrl && <p className="mt-3 text-center text-xs leading-5 text-white/50">Checkout opens on Amazon Kindle.</p>}
           </div>
           <section className="mt-8">
             <h2 className="text-2xl font-semibold tracking-tight text-white">What you will learn inside this AI business eBook</h2>

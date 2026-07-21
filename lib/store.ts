@@ -5,8 +5,7 @@ import { defaultSettings, Ebook, sampleEbooks, SiteSettings } from "@/lib/data";
 const BOOK_KEY = "ai-saas-academy-books";
 const SETTINGS_KEY = "ai-saas-academy-settings";
 const CATALOG_VERSION_KEY = "ai-saas-academy-catalog-version";
-const CURRENT_CATALOG_VERSION = "2026-07-06-ways-to-make-money-with-ai-cover";
-const catalogUpdateBookIds = ["ways-to-make-money-with-ai-500-pages"];
+const CURRENT_CATALOG_VERSION = "2026-07-21-amazon-kindle-catalog";
 
 function normalizeBook(book: Partial<Ebook>, fallback?: Ebook): Ebook {
   return {
@@ -21,7 +20,8 @@ function normalizeBook(book: Partial<Ebook>, fallback?: Ebook): Ebook {
     gallery: Array.isArray(book.gallery) ? book.gallery : fallback?.gallery || [],
     features: Array.isArray(book.features) ? book.features : fallback?.features || [],
     featured: Boolean(book.featured ?? fallback?.featured ?? false),
-    createdAt: book.createdAt || fallback?.createdAt || new Date().toISOString()
+    createdAt: book.createdAt || fallback?.createdAt || new Date().toISOString(),
+    amazonUrl: book.amazonUrl || fallback?.amazonUrl || ""
   };
 }
 
@@ -34,11 +34,7 @@ export function loadBooks(): Ebook[] {
     let nextBooks = Array.isArray(parsed) ? parsed.map((book) => normalizeBook(book)) : sampleEbooks;
     const savedVersion = window.localStorage.getItem(CATALOG_VERSION_KEY);
     if (savedVersion !== CURRENT_CATALOG_VERSION) {
-      const catalogUpdates = sampleEbooks.filter((book) => catalogUpdateBookIds.includes(book.id));
-      nextBooks = [
-        ...catalogUpdates,
-        ...nextBooks.filter((book) => !catalogUpdateBookIds.includes(book.id))
-      ];
+      nextBooks = sampleEbooks;
       window.localStorage.setItem(CATALOG_VERSION_KEY, CURRENT_CATALOG_VERSION);
     }
     if (JSON.stringify(nextBooks) !== saved) {
@@ -53,6 +49,7 @@ export function loadBooks(): Ebook[] {
 
 export function saveBooks(books: Ebook[]) {
   window.localStorage.setItem(BOOK_KEY, JSON.stringify(books.map((book) => normalizeBook(book))));
+  window.localStorage.setItem(CATALOG_VERSION_KEY, CURRENT_CATALOG_VERSION);
   window.dispatchEvent(new Event("academy-books-updated"));
 }
 
