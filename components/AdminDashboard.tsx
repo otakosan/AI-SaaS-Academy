@@ -179,6 +179,15 @@ export function AdminDashboard() {
         {exportStatus && <p className="mt-4 rounded-md border border-emerald-300/20 bg-emerald-400/10 px-3 py-2 text-sm text-emerald-100">{exportStatus}</p>}
         <textarea readOnly value={JSON.stringify({ books, settings })} className="mt-4 h-24 w-full rounded-md border border-white/10 bg-black/25 px-3 py-2 text-xs text-white/65 outline-none" />
       </section>
+      <section className="mt-6 rounded-lg border border-cyan-300/20 bg-cyan-400/10 p-5 backdrop-blur">
+        <h2 className="text-xl font-semibold text-white">Google indexing checklist</h2>
+        <p className="mt-2 text-sm leading-6 text-white/65">After adding or changing books, submit the sitemap and request indexing for the most important eBook pages in Google Search Console.</p>
+        <div className="mt-4 grid gap-2 text-sm text-white/70">
+          <a href="https://aithv.com/sitemap.xml" target="_blank" rel="noreferrer" className="rounded-md border border-white/10 bg-black/20 px-3 py-2 hover:text-white">Sitemap: https://aithv.com/sitemap.xml</a>
+          <a href="https://aithv.com/ebooks/ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding" target="_blank" rel="noreferrer" className="rounded-md border border-white/10 bg-black/20 px-3 py-2 hover:text-white">Index: AI SaaS Blueprint</a>
+          <a href="https://aithv.com/ebooks/ai-side-hustle-launch-kit" target="_blank" rel="noreferrer" className="rounded-md border border-white/10 bg-black/20 px-3 py-2 hover:text-white">Index: AI Side Hustle Launch Kit</a>
+        </div>
+      </section>
       <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <form onSubmit={submitBook} className="rounded-lg border border-white/10 bg-white/[0.05] p-5 backdrop-blur">
           <h2 className="mb-5 flex items-center gap-2 text-xl font-semibold text-white"><Plus className="h-5 w-5" /> Add / Edit eBook</h2>

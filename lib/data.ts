@@ -19,6 +19,11 @@ export type Ebook = {
   seoTitle?: string;
   seoDescription?: string;
   keywords?: string[];
+  bestFor?: string;
+  faq?: {
+    question: string;
+    answer: string;
+  }[];
 };
 
 export type SiteSettings = {
@@ -90,6 +95,21 @@ export const sampleEbooks: Ebook[] = [
       "no-code AI SaaS",
       "AI startup Kindle book",
       "launch AI SaaS business"
+    ],
+    bestFor: "Best for AI SaaS founders",
+    faq: [
+      {
+        question: "Who is AI SaaS Blueprint best for?",
+        answer: "It is best for beginners, founders, creators, and freelancers who want a practical roadmap for building an AI SaaS business without coding."
+      },
+      {
+        question: "Does this eBook require programming experience?",
+        answer: "No. The book focuses on no-code planning, validation, launch strategy, and AI SaaS business thinking."
+      },
+      {
+        question: "Where do I buy AI SaaS Blueprint?",
+        answer: "The eBook is available through the official Amazon Kindle checkout linked from this page."
+      }
     ]
   },
   {
@@ -124,6 +144,21 @@ export const sampleEbooks: Ebook[] = [
       "make money with AI tools",
       "AI freelancing ebook",
       "AI online business Kindle book"
+    ],
+    bestFor: "Best for beginners",
+    faq: [
+      {
+        question: "Who is AI Side Hustle Launch Kit best for?",
+        answer: "It is best for beginners who want simple AI side hustle ideas, beginner-friendly offers, and practical first steps."
+      },
+      {
+        question: "Can this help me make money with AI tools?",
+        answer: "Yes. It focuses on simple AI services, offer packaging, validation, and execution for people starting from zero."
+      },
+      {
+        question: "Where do I buy AI Side Hustle Launch Kit?",
+        answer: "The eBook is available through the official Amazon Kindle checkout linked from this page."
+      }
     ]
   },
   {
@@ -145,7 +180,21 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-20T10:00:00.000Z",
-    amazonUrl: "https://www.amazon.com/dp/B0H9P8DNZZ"
+    amazonUrl: "https://www.amazon.com/dp/B0H9P8DNZZ",
+    asin: "B0H9P8DNZZ",
+    author: "Abdelhakim benhammou",
+    bestFor: "Best for content creators",
+    keywords: ["AI content creation guide", "AI content prompts", "TikTok AI content", "YouTube AI scripts", "Facebook content with AI"],
+    faq: [
+      {
+        question: "Who is this AI content eBook best for?",
+        answer: "It is best for creators, freelancers, small businesses, and beginners who want repeatable content workflows for Facebook, TikTok, and YouTube."
+      },
+      {
+        question: "Does it include practical AI prompt workflows?",
+        answer: "Yes. It focuses on planning, prompting, adapting, and repurposing ideas into platform-ready content."
+      }
+    ]
   },
   {
     id: "over-500-sellable-digital-business-ideas",
@@ -166,7 +215,21 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-18T10:00:00.000Z",
-    amazonUrl: "https://www.amazon.com/dp/B0H9B9VG49"
+    amazonUrl: "https://www.amazon.com/dp/B0H9B9VG49",
+    asin: "B0H9B9VG49",
+    author: "Abdelhakim benhammou",
+    bestFor: "Best for idea discovery",
+    keywords: ["digital business ideas", "online business ideas", "sellable digital products", "AI business ideas", "digital product ideas"],
+    faq: [
+      {
+        question: "Who should read Over 500 Sellable Digital Business Ideas?",
+        answer: "It is best for entrepreneurs and creators who want a large library of online business, digital product, and AI-powered opportunity ideas."
+      },
+      {
+        question: "Can beginners use these ideas?",
+        answer: "Yes. The book is designed to help beginners explore ideas, compare opportunities, and choose something practical to test."
+      }
+    ]
   },
   {
     id: "the-ai-blueprint-build-your-own-artificial-intelligence-from-scratch",
@@ -187,7 +250,21 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-20T10:00:00.000Z",
-    amazonUrl: "https://www.amazon.com/dp/B0H9NTMPJP"
+    amazonUrl: "https://www.amazon.com/dp/B0H9NTMPJP",
+    asin: "B0H9NTMPJP",
+    author: "Abdelhakim benhammou",
+    bestFor: "Best for AI beginners",
+    keywords: ["AI blueprint", "build artificial intelligence from scratch", "AI for beginners", "learn artificial intelligence", "AI product builder"],
+    faq: [
+      {
+        question: "Is The AI Blueprint beginner-friendly?",
+        answer: "Yes. It is built for readers who want to understand artificial intelligence from a practical builder's point of view."
+      },
+      {
+        question: "What does this AI book help with?",
+        answer: "It helps readers understand AI concepts, product thinking, data, workflows, and how AI systems can be planned."
+      }
+    ]
   },
   {
     id: "100-professional-prompts-for-chatgpt-claude-and-grok",
@@ -208,7 +285,21 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-20T10:00:00.000Z",
-    amazonUrl: "https://www.amazon.com/dp/B0H9P32BCM"
+    amazonUrl: "https://www.amazon.com/dp/B0H9P32BCM",
+    asin: "B0H9P32BCM",
+    author: "Abdelhakim benhammou",
+    bestFor: "Best for prompt users",
+    keywords: ["ChatGPT prompts", "Claude prompts", "Grok prompts", "professional AI prompts", "prompt engineering ebook"],
+    faq: [
+      {
+        question: "Which AI tools does this prompt eBook support?",
+        answer: "The prompt library is designed for ChatGPT, Claude, Grok, and other modern AI assistants."
+      },
+      {
+        question: "Who should use these professional prompts?",
+        answer: "Developers, builders, freelancers, and business owners can use them for planning, writing, research, and execution."
+      }
+    ]
   },
   {
     id: "build-an-ai-saas-without-code",
@@ -229,7 +320,21 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-20T10:00:00.000Z",
-    amazonUrl: "https://www.amazon.com/dp/B0H9NTVSNY"
+    amazonUrl: "https://www.amazon.com/dp/B0H9NTVSNY",
+    asin: "B0H9NTVSNY",
+    author: "Abdelhakim benhammou",
+    bestFor: "Best for no-code SaaS",
+    keywords: ["build AI SaaS without code", "no-code founder", "AI SaaS Kindle", "subscription business without coding", "no-code AI startup"],
+    faq: [
+      {
+        question: "Is Build an AI SaaS Without Code different from AI SaaS Blueprint?",
+        answer: "Yes. This book is a focused no-code founder guide, while AI SaaS Blueprint is positioned as a broader build, launch, and scale roadmap."
+      },
+      {
+        question: "Can I use it without coding skills?",
+        answer: "Yes. It focuses on no-code tools, validation, subscription thinking, and launch planning."
+      }
+    ]
   }
 ];
 

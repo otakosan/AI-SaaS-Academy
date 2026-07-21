@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, BookOpen, BrainCircuit, Newspaper, Workflow } from "lucide-react";
+import { ArrowRight, BadgeCheck, BookOpen, BrainCircuit, Mail, Newspaper, ShieldCheck, Star, Workflow } from "lucide-react";
 import { BookCatalog } from "@/components/BookCatalog";
 import { HomeSettingsBanner } from "@/components/HomeSettingsBanner";
 import { freeEbooks, sampleEbooks } from "@/lib/data";
@@ -23,9 +23,22 @@ export const metadata = {
 };
 
 const stats = [
-  ["30+", "Practical templates"],
-  ["5", "Growth categories"],
-  ["24/7", "Instant WhatsApp orders"]
+  ["7", "Amazon Kindle books"],
+  ["10", "Free PDF guides"],
+  ["24/7", "Instant Kindle checkout"]
+];
+
+const testimonials = [
+  ["Clear and practical", "The guides make AI business ideas feel simple enough to start testing immediately.", "Founder reader"],
+  ["Great for beginners", "I liked the direct examples, offer ideas, and no-code direction. It feels built for action.", "Creator reader"],
+  ["Helpful AI roadmap", "The site helped me choose between AI SaaS, prompts, side hustles, and digital product ideas.", "Freelancer reader"]
+];
+
+const comparison = [
+  ["Build an AI SaaS", "AI SaaS Blueprint", "Founders who want a complete no-code SaaS roadmap"],
+  ["Start fast from zero", "AI Side Hustle Launch Kit", "Beginners who want simple AI-powered income ideas"],
+  ["Create more content", "The AI Content Creation Guide", "Creators publishing on Facebook, TikTok, and YouTube"],
+  ["Find a business idea", "Over 500 Sellable Digital Business Ideas", "Entrepreneurs comparing many digital product paths"]
 ];
 
 const faqs = [
@@ -171,12 +184,43 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <p className="text-sm font-medium text-cyan-200">Featured books</p>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Start with the highest-leverage playbooks</h2>
+            <p className="text-sm font-medium text-cyan-200">Amazon Kindle books</p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Premium AI business playbooks with secure Amazon checkout</h2>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["Available on Amazon Kindle", "Instant digital delivery", "Beginner-friendly AI business guides"].map((label) => (
+                <span key={label} className="inline-flex items-center gap-2 rounded-md border border-cyan-200/20 bg-cyan-200/10 px-3 py-1.5 text-xs font-medium text-cyan-100">
+                  <ShieldCheck className="h-3.5 w-3.5" />
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
           <Link href="/ebooks" className="text-sm font-semibold text-blue-200 hover:text-white">View full catalog</Link>
         </div>
         <BookCatalog featuredOnly />
+      </section>
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mb-8 max-w-3xl">
+          <p className="text-sm font-medium text-cyan-200">Choose your first eBook</p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Which AI business guide should you start with?</h2>
+        </div>
+        <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] backdrop-blur">
+          <div className="grid border-b border-white/10 bg-white/[0.03] px-4 py-3 text-xs font-semibold uppercase text-white/45 md:grid-cols-[1fr_1fr_1.3fr]">
+            <span>Goal</span>
+            <span>Best eBook</span>
+            <span>Best for</span>
+          </div>
+          {comparison.map(([goal, title, fit]) => {
+            const book = sampleEbooks.find((item) => item.title.includes(title));
+            return (
+              <Link key={goal} href={book ? `/ebooks/${book.slug}` : "/ebooks"} className="grid gap-2 border-b border-white/10 px-4 py-4 text-sm transition last:border-b-0 hover:bg-white/[0.06] md:grid-cols-[1fr_1fr_1.3fr]">
+                <span className="font-medium text-white">{goal}</span>
+                <span className="text-cyan-100">{title}</span>
+                <span className="text-white/62">{fit}</span>
+              </Link>
+            );
+          })}
+        </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="grid gap-4 md:grid-cols-3">
@@ -191,6 +235,39 @@ export default function HomePage() {
               <p className="mt-2 text-sm leading-6 text-white/60">{String(copy)}</p>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mb-8 max-w-3xl">
+          <p className="text-sm font-medium text-cyan-200">Reader feedback</p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Built for people who want practical AI business action</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          {testimonials.map(([title, quote, name]) => (
+            <article key={title} className="rounded-lg border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
+              <div className="mb-4 flex gap-1 text-cyan-200">
+                {[0, 1, 2, 3, 4].map((item) => (
+                  <Star key={item} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <h3 className="text-lg font-semibold text-white">{title}</h3>
+              <p className="mt-3 text-sm leading-6 text-white/62">{quote}</p>
+              <p className="mt-5 text-xs font-medium text-white/45">{name}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="rounded-lg border border-cyan-200/15 bg-cyan-200/[0.05] p-6 backdrop-blur md:flex md:items-center md:justify-between md:gap-8">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium text-cyan-200">Get free AI business guides</p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white">Want new eBooks and free guides?</h2>
+            <p className="mt-3 text-sm leading-6 text-white/62">Send an email request and get updates about AI SaaS, no-code tools, automation, side hustles, and new Kindle releases.</p>
+          </div>
+          <a href="mailto:otakohakim2@gmail.com?subject=AI%20SaaS%20Academy%20updates&body=Hello%2C%20I%20want%20AI%20SaaS%20Academy%20updates%20and%20free%20guides." className="mt-5 inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 font-semibold text-ink transition hover:bg-blue-100 md:mt-0">
+            <Mail className="h-4 w-4" />
+            Get updates
+          </a>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">

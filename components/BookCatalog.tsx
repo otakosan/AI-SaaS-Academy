@@ -72,8 +72,10 @@ export function BookCatalog({ featuredOnly = false }: { featuredOnly?: boolean }
                 <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/65">{book.category}</span>
                 <span className="text-lg font-semibold text-white">{formatPrice(book.price)}</span>
               </div>
+              {book.bestFor && <p className="mb-3 inline-flex rounded-md border border-cyan-200/20 bg-cyan-200/10 px-2.5 py-1 text-xs font-medium text-cyan-100">{book.bestFor}</p>}
               <h3 className="text-lg font-semibold text-white">{book.title}</h3>
               <p className="mt-2 min-h-12 text-sm leading-6 text-white/58">{book.description}</p>
+              {book.amazonUrl && <p className="mt-3 text-xs font-medium text-white/50">Available on Amazon Kindle / secure Amazon checkout</p>}
               <Link href={`/ebooks/${book.slug}`} className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-blue-100">
                 Read Details
               </Link>

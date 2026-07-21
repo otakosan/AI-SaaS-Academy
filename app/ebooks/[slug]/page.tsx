@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Check, ExternalLink, MessageCircle } from "lucide-react";
+import { ArrowLeft, BookOpen, Check, ExternalLink, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { BookCover } from "@/components/BookCover";
 import { defaultSettings, formatPrice, sampleEbooks } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
@@ -67,6 +67,20 @@ export default function EbookDetailPage({ params }: PageProps) {
   if (!book) notFound();
 
   const amazonUrl = book.amazonUrl || "";
+  const relatedBooks = sampleEbooks
+    .filter((item) => item.slug !== book.slug)
+    .filter((item) => item.category === book.category || item.featured)
+    .slice(0, 3);
+  const bookFaqs = book.faq || [
+    {
+      question: `Who is ${book.title} best for?`,
+      answer: book.bestFor ? `${book.title} is ${book.bestFor.toLowerCase()} and for readers who want practical AI business guidance.` : `${book.title} is for readers who want practical AI business guidance.`
+    },
+    {
+      question: "Where can I buy this eBook?",
+      answer: "Use the Buy on Amazon button on this page to open the official Amazon Kindle checkout."
+    }
+  ];
   const message = encodeURIComponent(
     `Hello! I'm interested in purchasing:\n${book.title}\nPrice: $${book.price}\n\nPayment Method: Binance Pay\n\nI'm ready to BUY. Please send me the Binance Pay payment details.`
   );
@@ -183,10 +197,22 @@ export default function EbookDetailPage({ params }: PageProps) {
       }
     ]
   };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: bookFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  };
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([productSchema, bookSchema, breadcrumbSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([productSchema, bookSchema, breadcrumbSchema, faqSchema]) }} />
       <Link href="/ebooks" className="mb-8 inline-flex items-center gap-2 text-sm text-white/60 hover:text-white">
         <ArrowLeft className="h-4 w-4" />
         Back to AI eBook catalog
@@ -195,6 +221,7 @@ export default function EbookDetailPage({ params }: PageProps) {
         <BookCover title={book.title} category={book.category} image={book.cover} large />
         <div>
           <span className="rounded-full border border-blue-300/30 bg-blue-300/10 px-3 py-1 text-xs font-medium text-blue-100">{book.category}</span>
+          {book.bestFor && <span className="ml-2 rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-1 text-xs font-medium text-cyan-100">{book.bestFor}</span>}
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">{book.title}</h1>
           <div className="mt-5 space-y-5 text-lg leading-8 text-white/68">
             {book.longDescription.split("\n\n").map((paragraph) => (
@@ -219,6 +246,20 @@ export default function EbookDetailPage({ params }: PageProps) {
             )}
             {amazonUrl && <p className="mt-3 text-center text-xs leading-5 text-white/50">Checkout opens on Amazon Kindle.</p>}
           </div>
+          {amazonUrl && (
+            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+              {[
+                [ShieldCheck, "Secure Amazon checkout"],
+                [BookOpen, "Kindle digital delivery"],
+                [Sparkles, "Beginner-friendly guide"]
+              ].map(([Icon, label]) => (
+                <div key={String(label)} className="flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-white/70">
+                  <Icon className="h-4 w-4 text-cyan-200" />
+                  {String(label)}
+                </div>
+              ))}
+            </div>
+          )}
           <section className="mt-8">
             <h2 className="text-2xl font-semibold tracking-tight text-white">What you will learn inside this AI business eBook</h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -242,6 +283,40 @@ export default function EbookDetailPage({ params }: PageProps) {
               </div>
             </section>
           )}
+          <section className="mt-8 rounded-lg border border-white/10 bg-white/[0.04] p-6 backdrop-blur">
+            <h2 className="text-2xl font-semibold tracking-tight text-white">Questions before buying</h2>
+            <div className="mt-5 grid gap-4">
+              {bookFaqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="font-semibold text-white">{faq.question}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/62">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="mt-8">
+            <div className="mb-4 flex items-center justify-between gap-4">
+              <h2 className="text-2xl font-semibold tracking-tight text-white">Related AI business eBooks</h2>
+              <Link href="/ebooks" className="text-sm font-semibold text-blue-200 hover:text-white">View all</Link>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {relatedBooks.map((item) => (
+                <Link key={item.slug} href={`/ebooks/${item.slug}`} className="rounded-lg border border-white/10 bg-white/[0.04] p-4 transition hover:border-cyan-200/30 hover:bg-white/[0.07]">
+                  <span className="text-xs font-medium text-cyan-200">{item.bestFor || item.category}</span>
+                  <h3 className="mt-2 text-sm font-semibold leading-5 text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm font-semibold text-white/80">{formatPrice(item.price)}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+          <section className="mt-8 rounded-lg border border-cyan-200/15 bg-cyan-200/[0.05] p-6 backdrop-blur">
+            <h2 className="text-2xl font-semibold tracking-tight text-white">More AI business learning</h2>
+            <p className="mt-3 text-sm leading-6 text-white/62">Read practical articles and extra AI business ideas on the AI SaaS Academy blog.</p>
+            <a href="https://www.waveai360.com" target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-md border border-cyan-200/20 bg-cyan-200/10 px-4 py-2.5 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/35 hover:bg-cyan-200/15 hover:text-white">
+              Visit the blog
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </section>
         </div>
       </section>
     </main>

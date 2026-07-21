@@ -21,7 +21,14 @@ function normalizeBook(book: Partial<Ebook>, fallback?: Ebook): Ebook {
     features: Array.isArray(book.features) ? book.features : fallback?.features || [],
     featured: Boolean(book.featured ?? fallback?.featured ?? false),
     createdAt: book.createdAt || fallback?.createdAt || new Date().toISOString(),
-    amazonUrl: book.amazonUrl || fallback?.amazonUrl || ""
+    amazonUrl: book.amazonUrl || fallback?.amazonUrl || "",
+    asin: book.asin || fallback?.asin || "",
+    author: book.author || fallback?.author || "",
+    seoTitle: book.seoTitle || fallback?.seoTitle || "",
+    seoDescription: book.seoDescription || fallback?.seoDescription || "",
+    keywords: Array.isArray(book.keywords) ? book.keywords : fallback?.keywords || [],
+    bestFor: book.bestFor || fallback?.bestFor || "",
+    faq: Array.isArray(book.faq) ? book.faq : fallback?.faq || []
   };
 }
 
