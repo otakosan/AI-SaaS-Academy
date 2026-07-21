@@ -81,7 +81,7 @@ export const sampleEbooks: Ebook[] = [
     description: "A broad Kindle idea library for entrepreneurs who want digital product, online business, and AI-powered opportunity ideas they can start testing.",
     longDescription:
       "Over 500 Sellable Digital Business Ideas is a Kindle guide for entrepreneurs who want a large collection of online business opportunities, digital product concepts, and practical launch angles.\n\nThe book is designed to help beginners and builders explore sellable ideas, think through revenue models, and find opportunities that can be tested with AI tools, content, automation, and simple digital products.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
-    price: 0,
+    price: 4.99,
     category: "Online Business",
     cover: "https://m.media-amazon.com/images/I/71JPS4dtkTL._AC_UY654_QL65_.jpg",
     gallery: [],
@@ -102,7 +102,7 @@ export const sampleEbooks: Ebook[] = [
     description: "A beginner-focused Kindle guide for understanding how AI systems are planned, structured, and built from the ground up.",
     longDescription:
       "The AI Blueprint is made for readers who want to understand artificial intelligence from a practical builder's point of view. It introduces the thinking behind AI projects, workflows, data, model behavior, and how AI products can be planned.\n\nThis Kindle eBook is a strong starting point for beginners who want to move from curiosity to building useful AI-powered products, tools, or business systems.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
-    price: 0,
+    price: 4.99,
     category: "Artificial Intelligence",
     cover: "https://m.media-amazon.com/images/I/710SIk4Ez8L._AC_UY654_QL65_.jpg",
     gallery: [],
