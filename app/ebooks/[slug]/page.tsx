@@ -35,12 +35,13 @@ export function generateMetadata({ params }: PageProps): Metadata {
     };
   }
 
-  const title = `${book.title} - ${formatPrice(book.price)} AI Business eBook`;
-  const description = `${book.description} Read details on AI SaaS Academy and buy the Kindle eBook on Amazon.`;
+  const title = book.seoTitle || `${book.title} - ${formatPrice(book.price)} AI Business eBook`;
+  const description = book.seoDescription || `${book.description} Read details on AI SaaS Academy and buy the Kindle eBook on Amazon.`;
 
   return {
     title,
     description,
+    keywords: book.keywords || [book.title, book.category, "AI SaaS Academy", "AI business ebook", "Kindle ebook"],
     alternates: {
       canonical: `/ebooks/${book.slug}`
     },
@@ -123,10 +124,69 @@ export default function EbookDetailPage({ params }: PageProps) {
       }
     }
   };
+  const bookSchema = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: book.title,
+    headline: book.seoTitle || book.title,
+    description: book.seoDescription || book.description,
+    image: absoluteUrl(book.cover),
+    url: `${siteUrl}/ebooks/${book.slug}`,
+    sameAs: amazonUrl || undefined,
+    identifier: book.asin
+      ? {
+          "@type": "PropertyValue",
+          propertyID: "ASIN",
+          value: book.asin
+        }
+      : undefined,
+    author: {
+      "@type": "Person",
+      name: book.author || "Abdelhakim benhammou"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Amazon Kindle"
+    },
+    inLanguage: "en",
+    bookFormat: "https://schema.org/EBook",
+    about: book.keywords || [book.category, "AI business", "AI SaaS", "Online business"],
+    offers: {
+      "@type": "Offer",
+      url: amazonUrl || `${siteUrl}/ebooks/${book.slug}`,
+      priceCurrency: "USD",
+      price: book.price,
+      availability: "https://schema.org/InStock"
+    }
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "eBooks",
+        item: `${siteUrl}/ebooks`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: book.title,
+        item: `${siteUrl}/ebooks/${book.slug}`
+      }
+    ]
+  };
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([productSchema, bookSchema, breadcrumbSchema]) }} />
       <Link href="/ebooks" className="mb-8 inline-flex items-center gap-2 text-sm text-white/60 hover:text-white">
         <ArrowLeft className="h-4 w-4" />
         Back to AI eBook catalog

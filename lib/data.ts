@@ -14,6 +14,11 @@ export type Ebook = {
   featured: boolean;
   createdAt: string;
   amazonUrl?: string;
+  asin?: string;
+  author?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string[];
 };
 
 export type SiteSettings = {
@@ -59,7 +64,7 @@ export const sampleEbooks: Ebook[] = [
     slug: "ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding",
     description: "A premium Kindle roadmap for building, launching, and scaling a profitable AI SaaS business without needing to code.",
     longDescription:
-      "AI SaaS Blueprint is a practical Kindle eBook for founders, creators, and beginners who want to build an AI-powered SaaS business without traditional coding.\n\nInside, readers learn how to shape an AI SaaS idea, build a no-code launch plan, understand the core systems behind subscription products, and think through growth, positioning, and scaling.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+      "AI SaaS Blueprint is a practical Kindle eBook for founders, creators, freelancers, and beginners who want to build an AI-powered SaaS business without traditional coding.\n\nInside, readers learn how to shape an AI SaaS idea, validate demand, build a no-code launch plan, choose practical AI tools, understand subscription product systems, position the offer, and think through growth and scaling.\n\nThis guide is designed for people searching for a clear AI SaaS roadmap: how to build an AI SaaS without coding, how to launch a no-code AI business, and how to turn an AI product idea into a profitable subscription offer.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
     price: 9.99,
     category: "SaaS",
     cover: "https://m.media-amazon.com/images/I/61luspkpO9L._SL1500_.jpg",
@@ -72,7 +77,20 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-21T10:00:00.000Z",
-    amazonUrl: "https://www.amazon.com/dp/B0H9T5BSBT"
+    amazonUrl: "https://www.amazon.com/dp/B0H9T5BSBT",
+    asin: "B0H9T5BSBT",
+    author: "Abdelhakim benhammou",
+    seoTitle: "AI SaaS Blueprint - Build an AI SaaS Business Without Coding",
+    seoDescription:
+      "AI SaaS Blueprint is a Kindle eBook for building, launching, and scaling a profitable AI SaaS business without coding. Learn no-code AI SaaS validation, launch, and growth.",
+    keywords: [
+      "AI SaaS Blueprint",
+      "build AI SaaS without coding",
+      "AI SaaS business ebook",
+      "no-code AI SaaS",
+      "AI startup Kindle book",
+      "launch AI SaaS business"
+    ]
   },
   {
     id: "ai-side-hustle-launch-kit",
@@ -80,7 +98,7 @@ export const sampleEbooks: Ebook[] = [
     slug: "ai-side-hustle-launch-kit",
     description: "A beginner-friendly Kindle guide for starting an AI-powered side hustle with practical offers, simple tools, and fast launch ideas.",
     longDescription:
-      "AI Side Hustle Launch Kit is a practical Kindle eBook for beginners who want to start an AI-powered side hustle without getting lost in complicated tools or business theory.\n\nThe guide helps readers choose simple AI offers, package beginner-friendly services, use AI tools to work faster, and take the first steps toward making online income with focused execution.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+      "AI Side Hustle Launch Kit is a practical Kindle eBook for beginners who want to start an AI-powered side hustle without getting lost in complicated tools or business theory.\n\nThe guide helps readers choose simple AI offers, package beginner-friendly services, use AI tools to work faster, validate demand, create a basic offer, and take the first steps toward online income with focused execution.\n\nThis book is built for searches around AI side hustles, beginner AI business ideas, making money with AI tools, AI freelancing, digital services, and simple online business offers.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
     price: 6.99,
     category: "Online Business",
     cover: "https://m.media-amazon.com/images/I/51+k54JiDsL._AC_UY654_QL65_.jpg",
@@ -93,7 +111,20 @@ export const sampleEbooks: Ebook[] = [
     ],
     featured: true,
     createdAt: "2026-07-21T09:00:00.000Z",
-    amazonUrl: "https://www.amazon.com/dp/B0H9SSG32F"
+    amazonUrl: "https://www.amazon.com/dp/B0H9SSG32F",
+    asin: "B0H9SSG32F",
+    author: "Abdelhakim benhammou",
+    seoTitle: "AI Side Hustle Launch Kit - Beginner AI Business Ideas",
+    seoDescription:
+      "AI Side Hustle Launch Kit is a Kindle eBook for beginners who want to start an AI-powered side hustle, sell simple AI services, and make money with AI tools.",
+    keywords: [
+      "AI side hustle",
+      "AI side hustle launch kit",
+      "beginner AI business ideas",
+      "make money with AI tools",
+      "AI freelancing ebook",
+      "AI online business Kindle book"
+    ]
   },
   {
     id: "the-ai-content-creation-guide",
