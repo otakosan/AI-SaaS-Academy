@@ -54,6 +54,48 @@ export const coverStyles = [
 
 export const sampleEbooks: Ebook[] = [
   {
+    id: "ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding",
+    title: "AI SaaS Blueprint: Build, Launch & Scale a Profitable AI Business Without Coding",
+    slug: "ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding",
+    description: "A premium Kindle roadmap for building, launching, and scaling a profitable AI SaaS business without needing to code.",
+    longDescription:
+      "AI SaaS Blueprint is a practical Kindle eBook for founders, creators, and beginners who want to build an AI-powered SaaS business without traditional coding.\n\nInside, readers learn how to shape an AI SaaS idea, build a no-code launch plan, understand the core systems behind subscription products, and think through growth, positioning, and scaling.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 9.99,
+    category: "SaaS",
+    cover: "https://m.media-amazon.com/images/I/61luspkpO9L._SL1500_.jpg",
+    gallery: [],
+    features: [
+      "AI SaaS business blueprint",
+      "No-code launch and scaling strategy",
+      "Built for founders, creators, and beginners",
+      "Official Amazon Kindle checkout"
+    ],
+    featured: true,
+    createdAt: "2026-07-21T10:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9T5BSBT"
+  },
+  {
+    id: "ai-side-hustle-launch-kit",
+    title: "AI Side Hustle Launch Kit",
+    slug: "ai-side-hustle-launch-kit",
+    description: "A beginner-friendly Kindle guide for starting an AI-powered side hustle with practical offers, simple tools, and fast launch ideas.",
+    longDescription:
+      "AI Side Hustle Launch Kit is a practical Kindle eBook for beginners who want to start an AI-powered side hustle without getting lost in complicated tools or business theory.\n\nThe guide helps readers choose simple AI offers, package beginner-friendly services, use AI tools to work faster, and take the first steps toward making online income with focused execution.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 6.99,
+    category: "Online Business",
+    cover: "https://m.media-amazon.com/images/I/51+k54JiDsL._AC_UY654_QL65_.jpg",
+    gallery: [],
+    features: [
+      "Beginner AI side hustle ideas",
+      "Simple offers and launch steps",
+      "Practical AI tools for online income",
+      "Official Amazon Kindle checkout"
+    ],
+    featured: true,
+    createdAt: "2026-07-21T09:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9SSG32F"
+  },
+  {
     id: "the-ai-content-creation-guide",
     title: "The AI Content Creation Guide: Facebook, TikTok, YouTube",
     slug: "the-ai-content-creation-guide",
@@ -289,6 +331,7 @@ export function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    maximumFractionDigits: 0
+    minimumFractionDigits: Number.isInteger(price) ? 0 : 2,
+    maximumFractionDigits: 2
   }).format(price);
 }

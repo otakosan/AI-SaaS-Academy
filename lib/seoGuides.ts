@@ -65,7 +65,7 @@ export const seoGuides: SeoGuide[] = [
           "The easiest path is often an AI service for a specific audience, such as AI content creation, automation setup, lead research, or chatbot workflows."
       }
     ],
-    recommendedBookSlugs: ["over-500-sellable-digital-business-ideas", "100-professional-prompts-for-chatgpt-claude-and-grok"],
+    recommendedBookSlugs: ["ai-side-hustle-launch-kit", "over-500-sellable-digital-business-ideas"],
     recommendedFreeSlugs: ["zero-audience-to-first-digital-product-sale", "ai-freelancer-product-ladder"]
   },
   {
@@ -113,7 +113,7 @@ export const seoGuides: SeoGuide[] = [
           "A good first idea solves one repeated business problem, such as customer replies, lead research, content creation, document summaries, or reporting."
       }
     ],
-    recommendedBookSlugs: ["build-an-ai-saas-without-code", "over-500-sellable-digital-business-ideas"],
+    recommendedBookSlugs: ["ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding", "build-an-ai-saas-without-code"],
     recommendedFreeSlugs: ["build-your-first-ai-micro-saas", "micro-saas-ideas-for-boring-businesses"]
   },
   {
@@ -161,7 +161,7 @@ export const seoGuides: SeoGuide[] = [
           "No. You can begin with visual automation tools, AI assistants, databases, forms, and templates, then add custom code later if the idea proves demand."
       }
     ],
-    recommendedBookSlugs: ["build-an-ai-saas-without-code", "100-professional-prompts-for-chatgpt-claude-and-grok"],
+    recommendedBookSlugs: ["ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding", "100-professional-prompts-for-chatgpt-claude-and-grok"],
     recommendedFreeSlugs: ["build-useful-ai-tools-with-apis", "build-and-sell-ai-templates"]
   },
   {

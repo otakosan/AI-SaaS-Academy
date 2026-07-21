@@ -5,7 +5,7 @@ import { defaultSettings, Ebook, sampleEbooks, SiteSettings } from "@/lib/data";
 const BOOK_KEY = "ai-saas-academy-books";
 const SETTINGS_KEY = "ai-saas-academy-settings";
 const CATALOG_VERSION_KEY = "ai-saas-academy-catalog-version";
-const CURRENT_CATALOG_VERSION = "2026-07-21-amazon-kindle-paid-prices";
+const CURRENT_CATALOG_VERSION = "2026-07-21-two-new-amazon-kindle-books";
 
 function normalizeBook(book: Partial<Ebook>, fallback?: Ebook): Ebook {
   return {
