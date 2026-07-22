@@ -23,7 +23,7 @@ export const metadata = {
 };
 
 const stats = [
-  ["7", "Amazon Kindle books"],
+  ["8", "Amazon Kindle books"],
   ["10", "Free PDF guides"],
   ["24/7", "Instant Kindle checkout"]
 ];
@@ -35,6 +35,7 @@ const testimonials = [
 ];
 
 const comparison = [
+  ["Discover profitable AI ideas", "AI Business Ideas That Actually Make Money", "Beginners who want 300+ low-investment AI business opportunities"],
   ["Build an AI SaaS", "AI SaaS Blueprint", "Founders who want a complete no-code SaaS roadmap"],
   ["Start fast from zero", "AI Side Hustle Launch Kit", "Beginners who want simple AI-powered income ideas"],
   ["Create more content", "The AI Content Creation Guide", "Creators publishing on Facebook, TikTok, and YouTube"],

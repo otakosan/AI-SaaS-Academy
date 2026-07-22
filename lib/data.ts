@@ -64,6 +64,60 @@ export const coverStyles = [
 
 export const sampleEbooks: Ebook[] = [
   {
+    id: "ai-business-ideas-that-actually-make-money",
+    title: "AI Business Ideas That Actually Make Money: Discover 300+ Profitable AI Business Opportunities You Can Start with Little or No Investment",
+    slug: "ai-business-ideas-that-actually-make-money",
+    description:
+      "A practical Kindle guide with 300+ profitable AI business ideas for beginners, creators, and entrepreneurs who want low-investment opportunities.",
+    longDescription:
+      "AI Business Ideas That Actually Make Money is a practical Kindle eBook for readers who want clear, realistic AI business opportunities they can start with little or no investment.\n\nInside, readers discover 300+ AI-powered business ideas across digital products, services, automation, content, SaaS, freelancing, and online business models. The goal is to help beginners and entrepreneurs stop guessing, compare profitable opportunities, and choose an AI business idea they can validate quickly.\n\nThis guide is designed for high-intent searches around profitable AI business ideas, AI startup ideas, AI side hustles, make money with AI, low-investment AI businesses, and AI opportunities for beginners.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
+    price: 4.99,
+    category: "Online Business",
+    cover: "https://m.media-amazon.com/images/P/B0H9XG4SLK.01._SCLZZZZZZZ_SX500_.jpg",
+    gallery: [],
+    features: [
+      "300+ profitable AI business opportunities",
+      "Low-investment ideas for beginners and entrepreneurs",
+      "Covers AI services, digital products, automation, SaaS, and online business",
+      "Official Amazon Kindle checkout"
+    ],
+    featured: true,
+    createdAt: "2026-07-22T10:00:00.000Z",
+    amazonUrl: "https://www.amazon.com/dp/B0H9XG4SLK",
+    asin: "B0H9XG4SLK",
+    author: "Abdelhakim benhammou",
+    seoTitle: "AI Business Ideas That Actually Make Money - 300+ Profitable AI Opportunities",
+    seoDescription:
+      "Discover 300+ profitable AI business ideas you can start with little or no investment. A Kindle guide for AI side hustles, digital products, automation, SaaS, and online business.",
+    keywords: [
+      "AI business ideas that actually make money",
+      "profitable AI business ideas",
+      "300 AI business ideas",
+      "AI business opportunities",
+      "make money with AI",
+      "low investment AI business",
+      "AI side hustle ideas",
+      "AI startup ideas"
+    ],
+    bestFor: "Best for AI business idea discovery",
+    faq: [
+      {
+        question: "Who is AI Business Ideas That Actually Make Money best for?",
+        answer:
+          "It is best for beginners, creators, freelancers, and entrepreneurs who want a large list of realistic AI business ideas they can compare and validate."
+      },
+      {
+        question: "Does this eBook include low-investment AI business ideas?",
+        answer:
+          "Yes. The book focuses on AI business opportunities that can be explored with little or no investment, including services, digital products, automation, and online business models."
+      },
+      {
+        question: "Where can I buy AI Business Ideas That Actually Make Money?",
+        answer: "The eBook is available through the official Amazon Kindle checkout linked from this page."
+      }
+    ]
+  },
+  {
     id: "ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding",
     title: "AI SaaS Blueprint: Build, Launch & Scale a Profitable AI Business Without Coding",
     slug: "ai-saas-blueprint-build-launch-scale-profitable-ai-business-without-coding",
