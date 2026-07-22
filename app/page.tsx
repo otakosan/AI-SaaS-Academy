@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, BookOpen, BrainCircuit, Mail, Newspaper, ShieldCheck, Star, Workflow } from "lucide-react";
 import { BookCatalog } from "@/components/BookCatalog";
 import { HomeSettingsBanner } from "@/components/HomeSettingsBanner";
-import { freeEbooks, sampleEbooks } from "@/lib/data";
+import { formatPrice, freeEbooks, sampleEbooks } from "@/lib/data";
 import { assetPath } from "@/lib/paths";
 import { seoGuides } from "@/lib/seoGuides";
 
@@ -58,6 +58,8 @@ const faqs = [
 ];
 
 export default function HomePage() {
+  const newestBook = sampleEbooks.find((book) => book.slug === "ai-business-ideas-that-actually-make-money");
+
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -198,6 +200,30 @@ export default function HomePage() {
           </div>
           <Link href="/ebooks" className="text-sm font-semibold text-blue-200 hover:text-white">View full catalog</Link>
         </div>
+        {newestBook && (
+          <article className="mb-8 grid gap-6 overflow-hidden rounded-lg border border-cyan-200/20 bg-cyan-200/[0.06] p-4 backdrop-blur md:grid-cols-[220px_1fr] md:p-5">
+            <Link href={`/ebooks/${newestBook.slug}`} className="relative block overflow-hidden rounded-lg border border-white/10 bg-black/30">
+              <img src={newestBook.cover} alt={`${newestBook.title} cover`} className="aspect-[2/3] h-full w-full object-cover" />
+            </Link>
+            <div className="flex flex-col justify-center">
+              <p className="text-sm font-medium text-cyan-200">New Kindle release</p>
+              <h3 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight text-white">{newestBook.title}</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/62">{newestBook.description}</p>
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <span className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white">{formatPrice(newestBook.price)}</span>
+                <Link href={`/ebooks/${newestBook.slug}`} className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-ink transition hover:bg-blue-100">
+                  Read Details
+                </Link>
+                {newestBook.amazonUrl && (
+                  <a href={newestBook.amazonUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-md border border-cyan-200/20 bg-cyan-200/10 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200/35 hover:bg-cyan-200/15 hover:text-white">
+                    Buy on Amazon
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        )}
         <BookCatalog featuredOnly />
       </section>
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">

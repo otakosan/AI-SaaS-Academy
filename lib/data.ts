@@ -73,7 +73,7 @@ export const sampleEbooks: Ebook[] = [
       "AI Business Ideas That Actually Make Money is a practical Kindle eBook for readers who want clear, realistic AI business opportunities they can start with little or no investment.\n\nInside, readers discover 300+ AI-powered business ideas across digital products, services, automation, content, SaaS, freelancing, and online business models. The goal is to help beginners and entrepreneurs stop guessing, compare profitable opportunities, and choose an AI business idea they can validate quickly.\n\nThis guide is designed for high-intent searches around profitable AI business ideas, AI startup ideas, AI side hustles, make money with AI, low-investment AI businesses, and AI opportunities for beginners.\n\nClick Buy on Amazon to open the official Amazon Kindle page and complete your purchase there.",
     price: 4.99,
     category: "Online Business",
-    cover: "https://m.media-amazon.com/images/P/B0H9XG4SLK.01._SCLZZZZZZZ_SX500_.jpg",
+    cover: "https://m.media-amazon.com/images/I/71ZmHH1AhYL._SL1500_.jpg",
     gallery: [],
     features: [
       "300+ profitable AI business opportunities",
