@@ -1,8 +1,12 @@
 import { ContactLinks } from "@/components/ContactLinks";
 
 export const metadata = {
-  title: "Contact",
-  description: "Contact AI SaaS Academy."
+  title: "Contact AI SaaS Academy | Choose an AI Business eBook",
+  description:
+    "Contact AI SaaS Academy for help choosing an AI SaaS, no-code, automation, prompt engineering, or make money with AI eBook.",
+  alternates: {
+    canonical: "/contact"
+  }
 };
 
 export default function ContactPage() {
