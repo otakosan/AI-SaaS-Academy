@@ -62,10 +62,13 @@ export default function SeoGuidePage({ params }: PageProps) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    mainEntityOfPage: `${siteUrl}/guides/${guide.slug}`,
     headline: guide.title,
     description: guide.description,
     url: `${siteUrl}/guides/${guide.slug}`,
     inLanguage: "en",
+    datePublished: "2026-07-01",
+    dateModified: "2026-08-26",
     author: {
       "@type": "Organization",
       name: "AI SaaS Academy",
@@ -94,10 +97,34 @@ export default function SeoGuidePage({ params }: PageProps) {
       }
     }))
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${siteUrl}/guides`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: guide.title,
+        item: `${siteUrl}/guides/${guide.slug}`
+      }
+    ]
+  };
 
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema, faqSchema]) }} />
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 grid-fade opacity-70" />
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
