@@ -1,5 +1,9 @@
 export const metadata = {
-  title: "Terms of Service"
+  title: "Terms of Service | AI SaaS Academy",
+  description: "Read the AI SaaS Academy terms for digital eBooks, educational content, and permitted use of paid materials.",
+  alternates: {
+    canonical: "/terms-of-service"
+  }
 };
 
 export default function TermsPage() {
