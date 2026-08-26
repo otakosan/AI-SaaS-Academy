@@ -1,8 +1,12 @@
 import { BadgeCheck, Target, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "About",
-  description: "About AI SaaS Academy."
+  title: "About AI SaaS Academy | AI SaaS & No-Code Business eBooks",
+  description:
+    "Learn about AI SaaS Academy, a practical eBook library for AI SaaS, no-code business, automation, prompt engineering, and online income builders.",
+  alternates: {
+    canonical: "/about"
+  }
 };
 
 export default function AboutPage() {
