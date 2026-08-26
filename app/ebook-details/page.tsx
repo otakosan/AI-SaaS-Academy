@@ -2,7 +2,11 @@ import { Suspense } from "react";
 import { BookDetailFromSearch } from "@/components/BookDetailFromSearch";
 
 export const metadata = {
-  title: "eBook Details"
+  title: "eBook Details",
+  robots: {
+    index: false,
+    follow: true
+  }
 };
 
 export default function EbookDetailsPage() {
