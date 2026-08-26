@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, BookOpen, BrainCircuit, Mail, Newspaper, ShieldCheck, Star, Workflow } from "lucide-react";
 import { BookCatalog } from "@/components/BookCatalog";
 import { HomeSettingsBanner } from "@/components/HomeSettingsBanner";
 import { formatPrice, freeEbooks, sampleEbooks } from "@/lib/data";
-import { assetPath } from "@/lib/paths";
 import { seoGuides } from "@/lib/seoGuides";
 
 export const metadata = {
@@ -45,7 +43,7 @@ const comparison = [
 const faqs = [
   [
     "What is the best eBook to start an AI SaaS business?",
-    "Start with How to Build an AI SaaS Business Without Coding if you want to validate an idea, use no-code tools, build a product, and launch faster."
+    "Start with AI SaaS Blueprint if you want to validate an idea, use no-code tools, build a product, and launch faster."
   ],
   [
     "Can beginners make money with AI eBooks and tools?",
@@ -120,7 +118,7 @@ export default function HomePage() {
       />
       <section className="relative">
         <div className="absolute inset-0 grid-fade opacity-70" />
-        <div className="mx-auto grid min-h-[calc(100vh-64px)] max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:px-8">
+        <div className="mx-auto min-h-[calc(100vh-64px)] max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="relative z-10 reveal">
             <span className="inline-flex items-center gap-2 rounded-full border border-blue-300/20 bg-blue-300/10 px-3 py-1 text-xs font-medium text-blue-100">
               <BadgeCheck className="h-4 w-4" />
@@ -177,10 +175,6 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="relative z-10 min-h-[420px] reveal">
-            <div className="absolute -inset-8 rounded-full bg-blue-500/20 blur-3xl" />
-            <Image src={assetPath("/assets/hero-ai-academy.png")} alt="Futuristic AI learning illustration" fill priority className="rounded-lg object-cover shadow-glow" />
           </div>
         </div>
       </section>
