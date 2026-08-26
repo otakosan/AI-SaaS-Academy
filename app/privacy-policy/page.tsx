@@ -1,5 +1,9 @@
 export const metadata = {
-  title: "Privacy Policy"
+  title: "Privacy Policy | AI SaaS Academy",
+  description: "Read the AI SaaS Academy privacy policy for eBook inquiries, website analytics, and customer communication.",
+  alternates: {
+    canonical: "/privacy-policy"
+  }
 };
 
 export default function PrivacyPolicyPage() {
