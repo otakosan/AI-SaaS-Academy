@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
   description: "Learn how to build AI SaaS businesses, use no-code tools, automate workflows, and make money with AI through practical digital eBooks.",
   applicationName: "AI SaaS Academy",
+  authors: [{ name: "AI SaaS Academy", url: siteUrl }],
+  creator: "AI SaaS Academy",
+  publisher: "AI SaaS Academy",
   category: "education",
   keywords: [
     "AI SaaS ebook",
@@ -30,9 +33,6 @@ export const metadata: Metadata = {
     "prompt engineering ebook",
     "AI SaaS Academy"
   ],
-  alternates: {
-    canonical: "/"
-  },
   robots: {
     index: true,
     follow: true,
@@ -57,7 +57,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI SaaS Academy | AI SaaS & No-Code Business eBooks",
-    description: "Build your AI business faster with practical digital eBooks."
+    description: "Build your AI business faster with practical digital eBooks.",
+    images: [assetPath("/assets/ai-saas-academy-logo.jpeg")]
   }
 };
 
